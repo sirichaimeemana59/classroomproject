@@ -1,12 +1,20 @@
 <?php
-
-//Route::get('/', function () {
-//    return view('index.index');
-//});
+Auth::routes();
 
 Route::get('/index','Home\HomeController@index');
 
 //User Login
 Route::post('user/login','User\UserLoginController@index');
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
 //Admin Teacher
 Route::get('/admin/teacher','Admin\AdminTeacherController@index');
+Route::post('/admin/insert_teacher','Admin\AdminTeacherController@create');
+Route::post('/admin/view_teacher','Admin\AdminTeacherController@show');
+Route::post('/admin/edit_teacher','Admin\AdminTeacherController@edit');
+Route::post('admin/edit_teacher_form','Admin\AdminTeacherController@update');
+Route::post('product/delete_product','Admin\AdminTeacherController@destroy');
+
