@@ -46,6 +46,26 @@
             </ul>
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item dropdown mr-1">
+                    <a class="nav-link" href="{!! url('/locale/th') !!}">
+                        <i class="mdi  mx-0">TH</i>
+                    </a>
+                    {{--<a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"  href="#" data-toggle="dropdown">--}}
+                        {{--<i class="mdi mx-0"><img src="https://www.thaisabuy.com/wp-content/uploads/2016/02/20141128155624RedIH1zG.png" alt="" width="10%" height="10%"></i>--}}
+                    {{--</a>--}}
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item dropdown mr-1">
+                    <a class="nav-link" href="{!! url('/locale/en') !!}">
+                        <i class="mdi  mx-0">EN</i>
+                    </a>
+                    {{--<a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"  href="#" data-toggle="dropdown">--}}
+                        {{--<i class="mdi mx-0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/300px-Flag_of_the_United_Kingdom.svg.png" alt="" width="25%" height="25%"></i>--}}
+                    {{--</a>--}}
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item dropdown mr-1">
                     <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
                         <i class="mdi mdi-message-text mx-0"></i>
                         <span class="count"></span>
@@ -166,16 +186,15 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{!! url('/admin/teacher') !!}">
                         <i class="mdi mdi-home menu-icon"></i>
-                        <span class="menu-title">Dashboard</span>
+                        <span class="menu-title">{!! trans('messages.teacher.list_teacher') !!}</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                        <i class="mdi mdi-circle-outline menu-icon"></i>
-                        <span class="menu-title">UI Elements</span>
-                        <i class="menu-arrow"></i>
+                    <a class="nav-link" href="{!! url('/admin/student') !!}">
+                        <i class="mdi mdi-account-multiple menu-icon"></i>
+                        <span class="menu-title">{!! trans('messages.student.list_student') !!}</span>
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">

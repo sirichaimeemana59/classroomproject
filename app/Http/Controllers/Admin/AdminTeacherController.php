@@ -7,12 +7,16 @@ use App\Http\Controllers\Controller;
 
 use App\teacher;
 use ImageUploadAndResizer;
+use App;
 
 class AdminTeacherController extends Controller
 {
 
     public function index(Request $request)
     {
+//        App::setLocale('th');
+//        App::getLocale();
+
         $teacher = new teacher;
 
         if($request->method('post')) {

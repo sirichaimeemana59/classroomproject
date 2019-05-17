@@ -15,5 +15,8 @@ return [
         'photo' => 'Photo',
         'birthdate' => 'Birthdate',
         'tell' => 'tell'
+    ],
+    'student' =>[
+        'list_student' => 'Student',
     ]
 ];

@@ -8,7 +8,11 @@ Route::post('user/login','User\UserLoginController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'Auth\LoginController@getLogout');
 
-
+//Language
+Route::get('locale/{locale?}',function($locale){
+   Session::put('locale',$locale);
+   return redirect()->back();
+});
 
 
 //Admin Teacher
