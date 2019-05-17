@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-
+use Redirect;
+use DB;
+use App\User;
 class HomeController extends Controller
 {
     /**
@@ -25,6 +27,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('/admin/teacher');
+       // dd(Auth::user()->name);
+        //return redirect('/admin/teacher');
+            if( Auth::user()->role == 1){
+                Redirect::to('/admin/teacher')->send();
+            }else if(Auth::user()->role == 0){
+                Redirect::to('/student/home')->send();
+            }else{
+                Redirect::to('/index')->send();
+            }
+
     }
 }

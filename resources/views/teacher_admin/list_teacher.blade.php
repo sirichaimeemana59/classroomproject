@@ -15,15 +15,15 @@
                                 <input class="form-control" size="25" placeholder="{!! trans('messages.name') !!}" name="name">
                             </div>
 
-                            <div class="col-sm-3 block-input">
-                                <input class="form-control" size="25" placeholder="{!! trans('messages.id') !!}" name="id">
-                            </div>
+                            {{--<div class="col-sm-3 block-input">--}}
+                                {{--<input class="form-control" size="25" placeholder="{!! trans('messages.id') !!}" name="id">--}}
+                            {{--</div>--}}
                         </div>
 
                         <div class="row">
                             <div class="col-sm-12 text-right">
-                                    <button type="reset" class="btn btn-white reset-s-btn1">{!! trans('messages.reset') !!}</button>
-                                    <button type="button" class="btn btn-secondary p-search-property-sale">{!! trans('messages.search') !!}</button>
+                                    <button type="reset" class="btn btn-white reset-s-btn">{!! trans('messages.reset') !!}</button>
+                                    <button type="button" class="btn btn-secondary search-teacher">{!! trans('messages.search') !!}</button>
                             </div>
                         </div>
                     </form>
@@ -41,7 +41,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">{!! trans('messages.teacher.list_teacher') !!}</h3>
                     </div>
-                    <div class="panel-body search-form">
+                    <div class="panel-body search-form" id="landing-teacher-list">
                         <div class="row">
                             <div class="col-sm-12 text-right">
                                 <button class="btn btn-primary mt-2 mt-xl-0 text-right add-teacher"><i class="mdi mdi-account-multiple-plus"></i>  {!! trans('messages.teacher.list_teacher') !!}</button>
@@ -272,6 +272,31 @@
                         }, 50);
                     } else {
                         swal("Your imaginary file is safe!");
+                    }
+                });
+            });
+
+            $('.reset-s-btn').on('click',function () {
+                $(this).closest('form').find("input").val("");
+                $(this).closest('form').find("select option:selected").removeAttr('selected');
+                //propertyPageSale (1);
+                window.location.href ='/admin/teacher';
+            });
+
+            $('.search-teacher').on('click',function(){
+               var data  = $('#search-form').serialize();
+                //alert('aa');
+               //console.log(data);
+                $('#landing-teacher-list').css('opacity','0.6');
+                $.ajax({
+                    url : '/admin/teacher',
+                    method : 'post',
+                    dataType : 'html',
+                    data : data,
+                    success : function(e){
+                        $('#landing-teacher-list').css('opacity','1').html(e);
+                    } ,error : function(){
+                        console.log('Error Search Data Teacher');
                     }
                 });
             });

@@ -11,16 +11,24 @@ use ImageUploadAndResizer;
 class AdminTeacherController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         $teacher = new teacher;
+
+        if($request->method('post')) {
+            if ($request->input('name')) {
+                $teacher = $teacher->where('name_teacher', 'like', "%" . $request->input('name') . "%")
+                    ->orWhere('lastname_teacher', 'like', "%" . $request->input('name') . "%");
+            }
+        }
+
         $teacher = $teacher->get();
 
-        //if(!Request::ajax()) {
+        if(!$request->ajax()) {
             return view('teacher_admin.list_teacher')->with(compact('teacher'));
-//        }else{
-//            return view('teacher_admin.list_teacher_element')->with(compact('teacher'));
-//        }
+        }else{
+            return view('teacher_admin.list_teacher_element')->with(compact('teacher'));
+        }
 
 
     }
