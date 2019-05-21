@@ -24,5 +24,12 @@ return [
     ],
     'student' =>[
         'list_student' => 'Student',
-    ]
+    ],
+    'subjects' => [
+        'list_subjects' => 'Subjects',
+        'subject_th' => 'Subject(EN)',
+        'amount'  => 'Amount/Room',
+        'time_start' => 'Class_Start',
+        'time_stop' => 'Class_Finish',
+    ],
 ];

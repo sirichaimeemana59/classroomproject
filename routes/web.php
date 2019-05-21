@@ -30,3 +30,12 @@ Route::post('/admin/view_student','Admin\StudentController@show');
 Route::post('/admin/edit_student','Admin\StudentController@edit');
 Route::post('/admin/edit_student_form','Admin\StudentController@update');
 Route::post('/student/delete_student','Admin\StudentController@destroy');
+
+//Teacher
+//Route::get('/teacher/home','Teacher\TeacherController@index');
+Route::any('/teacher/list_subject','Teacher\TeacherController@index');
+Route::post('/teacher/insert_subject','Teacher\TeacherController@create');
+Route::post('/teacher/view_subject','Teacher\TeacherController@show');
+Route::post('/teacher/edit_subject','Teacher\TeacherController@edit');
+Route::post('/teacher/edit_subject/form','Teacher\TeacherController@update');
+Route::post('/teacher/delete_subject','Teacher\TeacherController@destroy');

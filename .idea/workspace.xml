@@ -2,228 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bb4058f-c581-46f9-80b5-f648fa9d4f07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/student.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style-beige.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style-black.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style-blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style-green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style-lightblue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style-orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/hero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/image-placeholder-160x115.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/image-placeholder-160x90.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/image-placeholder-255x315.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/image-placeholder-65x65.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/image-placeholder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/layout-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/layout-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/layout-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/layout-d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/product-placeholder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/skip-link-focus-fix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/_bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/_normalize.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/elements/_elements.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/elements/_lists.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/elements/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/forms/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/forms/_fields.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/forms/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/media/_captions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/media/_galleries.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/media/_media.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/mixins/_mixins-master.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_accessibility.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_alignments.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_clearings.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_header-bar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_infinite-scroll.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_main-slider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/_woocommerce.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/multilang/_menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/multilang/_settings.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/modules/multilang/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/navigation/_links.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/navigation/_menus.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/navigation/_navigation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/navigation/_pager.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/navigation/_socials.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/site/_site.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/site/primary/_comments.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/site/primary/_posts-and-pages.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/site/secondary/_widgets.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/style-beige.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/style-black.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/style-blue.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/style-green.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/style-lightblue.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/style-orange.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/typography/_copy.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/typography/_headings.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/typography/_typography.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/variables-site/_colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/variables-site/_structure.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/variables-site/_typography.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/sass/variables-site/_variables-site.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/adsenseloader/jquery.adsenseloader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/adsenseloader/jquery.adsenseloader.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/fontawesome/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/fontawesome/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/fontawesome/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/fontawesome/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/fontawesome/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/fontawesome/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/fontawesome/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/fontawesome/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/jquery-zoom/jquery.zoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/jquery-zoom/jquery.zoom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/menu/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/menu/menu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/owl-carousel/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/owl-carousel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/owl-carousel/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/owl-carousel/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/owl-carousel/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/owl-carousel/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/owl-carousel/owl.theme.default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendors/owl-carousel/owl.video.play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css_index/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css_index/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css_index/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css_index/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/class-tyche-autoloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/class-tyche.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/customizer/assets/css/upload-media.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/customizer/assets/js/previewer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/customizer/assets/js/upload-media.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/customizer/class-tyche-customizer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/customizer/theme-options/options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/customizer/theme-options/panels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/customizer/theme-options/sections.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/helpers/class-tyche-helper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-kirki-installer-section.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tgm-plugin-activation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tyche-breadcrumbs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tyche-frontpage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tyche-hooks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tyche-kirki.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tyche-navwalker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tyche-notify-system.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tyche-sidebars.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/class-tyche-woocommerce-hooks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/data/gfonts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/img/posts_carousel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/img/posts_column.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/img/posts_grid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/img/posts_horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/img/posts_slider.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/img/posts_vertical_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/js/epsilon-previewer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/js/epsilon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/js/epsilon.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/epsilon-framework/components/color-schemes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/epsilon-framework/components/epsilon-object.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/epsilon-framework/components/range-sliders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/epsilon-framework/components/recommended-actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/epsilon-framework/components/typography.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/epsilon-framework/epsilon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/selectize/selectize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/selectize/selectize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/assets/vendors/selectize/selectize.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/changelog.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/class-epsilon-autoloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/class-epsilon-color-coded-categories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/class-epsilon-color-scheme.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/class-epsilon-framework.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/class-epsilon-notify-system.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/class-epsilon-typography.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/controls/class-epsilon-control-color-scheme.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/controls/class-epsilon-control-slider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/controls/class-epsilon-control-toggle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/controls/class-epsilon-control-typography.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/controls/class-epsilon-control-upsell.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/gruntfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/sections/class-epsilon-section-pro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/epsilon-framework/sections/class-epsilon-section-recommended-actions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/class-epsilon-welcome-screen.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/css/welcome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/img/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/img/colorlib-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/inc/class-epsilon-notifications.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/js/welcome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/sections/getting-started.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/sections/recommended-actions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/sections/recommended-plugins.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/welcome-screen/sections/support.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-contact/class-widget-tyche-contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-contact/view/default.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-products/class-widget-tyche-products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-products/view/layout-a.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-products/view/layout-b.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-products/view/layout-c.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-products/view/layout-d.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-recent-posts/class-widget-tyche-recent-posts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-recent-posts/view/alternate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/inc/libraries/widgets/widget-tyche-recent-posts/view/default.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/gmaps.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/jquery.ajaxchimp.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/jquery.form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/mail-script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/stellar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js_index/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/languages/tyche.pot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/page-templates/contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/author-info.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/banner/banner-adsense.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/banner/banner-image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/content-none.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/content-page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/content-search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/frontpage-widgets/content-area-1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/frontpage-widgets/content-area-2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/frontpage-widgets/content-area-3.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/frontpage-widgets/content-area-4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/frontpage-widgets/content-area-5.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/main-slider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/template-parts/top-header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/archive-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/global/sidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/loop/add-to-cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/single-product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/single-product/add-to-cart/external.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/single-product/add-to-cart/grouped.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/single-product/add-to-cart/simple.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/single-product/add-to-cart/variation-add-to-cart-button.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/woocommerce/single-product/tabs/tabs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student_admin/edit_student.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student_admin/list_student.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student_admin/list_student_element.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student_admin/view_student.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/subject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Teacher/edit_subject.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Teacher/list_subject.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Teacher/list_subject_element.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Teacher/view_subject.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layout/menu_admin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layout/menu_teacher.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/th/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/th/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teacher_admin/list_teacher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teacher_admin/list_teacher.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/teacher_admin/list_teacher_element.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teacher_admin/list_teacher_element.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -240,38 +30,98 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            <state relative-caret-position="580">
+              <caret line="35" column="70" lean-forward="true" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/messages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+            <state relative-caret-position="563">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/th/messages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/StudentController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1562">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
+                <element signature="e#46#74#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Teacher/TeacherController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="584" selection-start-line="584" selection-end-line="584" selection-end-column="16" />
+            <state relative-caret-position="258">
+              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <element signature="e#48#60#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Teacher/edit_subject.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Teacher/view_subject.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="119" selection-start-line="18" selection-start-column="119" selection-end-line="18" selection-end-column="119" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/index/index.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/Teacher/list_subject.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="825" column="28" lean-forward="true" selection-start-line="825" selection-start-column="28" selection-end-line="825" selection-end-column="28" />
+            <state relative-caret-position="462">
+              <caret line="281" column="38" lean-forward="true" selection-start-line="281" selection-start-column="38" selection-end-line="281" selection-end-column="38" />
+              <folding>
+                <element signature="e#7417#7440#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Teacher/list_subject_element.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/student_admin/list_student.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="164" column="60" lean-forward="true" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -293,6 +143,9 @@
       <find>message</find>
       <find>Student</find>
       <find>admin/student</find>
+      <find>fonts</find>
+      <find>mdi-menu</find>
+      <find>teacher/list_subject</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -319,20 +172,30 @@
         <option value="$PROJECT_DIR$/app/Http/Middleware/Localization.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminTeacherController.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/messages.php" />
-        <option value="$PROJECT_DIR$/resources/lang/th/messages.php" />
         <option value="$PROJECT_DIR$/app/student.php" />
         <option value="$PROJECT_DIR$/resources/views/student_admin/view_student.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/student_admin/edit_student.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/StudentController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/student_admin/list_student_element.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/teacher_admin/list_teacher_element.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/teacher_admin/list_teacher.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/student_admin/list_student.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/layout/layout.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/index/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Teacher/menu_tacher.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout/menu_admin.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout/menu_teacher.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Teacher/home_teacher.blade.php" />
+        <option value="$PROJECT_DIR$/app/subject.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/messages.php" />
+        <option value="$PROJECT_DIR$/resources/lang/th/messages.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout/layout.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Teacher/list_subject_element.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Teacher/view_subject.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Teacher/edit_subject.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Teacher/TeacherController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Teacher/list_subject.blade.php" />
       </list>
     </option>
   </component>
@@ -425,7 +288,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="968" />
+    <option name="width" value="1019" />
     <option name="height" value="1012" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -486,18 +349,23 @@
               <item name="ClassroomProject" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassroomProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassroomProject" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Teacher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassroomProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassroomProject" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClassroomProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassroomProject" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClassroomProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassroomProject" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts_index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClassroomProject" type="b2602c69:ProjectViewProjectNode" />
@@ -536,14 +404,14 @@
               <item name="ClassroomProject" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="student_admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClassroomProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="ClassroomProject" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="student_admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Teacher" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClassroomProject" type="b2602c69:ProjectViewProjectNode" />
@@ -573,11 +441,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/resources/views/layout" />
       <recent name="$PROJECT_DIR$/public/fonts_index" />
       <recent name="$PROJECT_DIR$/public/js_index" />
       <recent name="$PROJECT_DIR$/public/css_index" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/resources/views/student_admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/db_data" />
@@ -614,17 +482,18 @@
       <workItem from="1558059107380" duration="23920000" />
       <workItem from="1558087261770" duration="4339000" />
       <workItem from="1558407605806" duration="5581000" />
-      <workItem from="1558413436248" duration="492000" />
+      <workItem from="1558413436248" duration="7527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34332000" />
+    <option name="totallyTimeSpent" value="41367000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="968" height="1012" extended-state="0" />
+    <frame x="0" y="23" width="1019" height="1012" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49710312" visible="true" weight="0.37149027" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49710312" weight="0.36794463" />
       <window_info id="Structure" order="1" sideWeight="0.50289685" side_tool="true" weight="0.25239617" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -651,61 +520,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/vendors/mdi/css/materialdesignicons.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/pages/forms/basic_elements.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAdminTeacherController.php" />
-    <entry file="file://$PROJECT_DIR$/public/vendors_index/animate-css/wow.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/User/UserLoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#23#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Helpers/ImageUpload.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -713,17 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="57" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/teacher_admin/view_teacher.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#241#267#0#HTML" expanded="true" />
-            <element signature="e#252#279#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,13 +565,6 @@
           <folding>
             <element signature="e#45#58#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -826,16 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#45#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1804">
@@ -844,48 +630,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/student.php" />
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/th/messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/teacher_admin/list_teacher_element.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/student_admin/list_student_element.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/StudentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -924,41 +672,10 @@
     <entry file="file://$PROJECT_DIR$/public/assets/js/functions.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/teacher_admin/list_teacher.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2899">
           <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/student_admin/list_student.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="287" column="55" lean-forward="true" selection-start-line="287" selection-start-column="55" selection-end-line="287" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="584" selection-start-line="584" selection-end-line="584" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -970,8 +687,173 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
+        <state relative-caret-position="18150">
           <caret line="825" column="28" lean-forward="true" selection-start-line="825" selection-start-column="28" selection-end-line="825" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#45#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/menu_admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#45#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/menu_teacher.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/student_admin/list_student_element.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/th/messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="59" lean-forward="true" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="36" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/teacher_admin/view_teacher.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/student_admin/list_student.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="164" column="60" lean-forward="true" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Teacher/list_subject_element.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Teacher/edit_subject.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Teacher/view_subject.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="119" selection-start-line="18" selection-start-column="119" selection-end-line="18" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="35" column="70" lean-forward="true" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/StudentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1562">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Teacher/TeacherController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#48#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Teacher/list_subject.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="281" column="38" lean-forward="true" selection-start-line="281" selection-start-column="38" selection-end-line="281" selection-end-column="38" />
+          <folding>
+            <element signature="e#7417#7440#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

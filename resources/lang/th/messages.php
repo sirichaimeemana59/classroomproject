@@ -23,5 +23,12 @@ return [
     ],
     'student' =>[
         'list_student' => 'นักเรียน',
-    ]
+    ],
+    'subjects' => [
+        'list_subjects' => 'รายวิชา',
+        'subject_th' => 'ชื่อวิชา',
+        'amount'  => 'จำนวนคน/ห้อง',
+        'time_start' => 'เวลาเริ่ม',
+        'time_stop' => 'เวลาเลิก',
+    ],
 ];
