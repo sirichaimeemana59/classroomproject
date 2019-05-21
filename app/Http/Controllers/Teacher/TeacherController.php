@@ -21,7 +21,7 @@ class TeacherController extends Controller
             }
         }
 
-        $subject = $subject->get();
+        $subject = $subject->where('user_create',Auth::user()->id)->get();
 
         if(!Request::ajax()) {
             return view('Teacher.list_subject')->with(compact('subject'));

@@ -16,7 +16,7 @@
             @foreach($subject as $key => $row)
                 <tr>
                     <td>{!! $key+1 !!}</td>
-                    <td><?php $name = "name_subject_".Session::get('locale'); echo $row->$name;?></td>
+                    <td> {!! $row->{'name_subject_'.Session::get('locale')} !!}</td>
                     <td>{!! $row->amount !!}</td>
                     <td>{!! $row->time_start !!}</td>
                     <td>{!! $row->time_stop !!}</td>
