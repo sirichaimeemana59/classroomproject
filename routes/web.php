@@ -32,7 +32,7 @@ Route::post('/admin/edit_student_form','Admin\StudentController@update');
 Route::post('/student/delete_student','Admin\StudentController@destroy');
 
 //Teacher
-//Route::get('/teacher/home','Teacher\TeacherController@index');
+Route::get('/teacher/home','Teacher\TeacherController@index');
 Route::any('/teacher/list_subject','Teacher\TeacherController@index');
 Route::post('/teacher/insert_subject','Teacher\TeacherController@create');
 Route::post('/teacher/view_subject','Teacher\TeacherController@show');
