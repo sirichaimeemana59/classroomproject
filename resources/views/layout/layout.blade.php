@@ -4,6 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{!! csrf_token() !!}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Majestic Admin</title>
     <!-- plugins:css_layout -->
@@ -581,6 +582,7 @@
 
 <!-- plugins:js -->
 <script src="{!! url('/') !!}/vendors/base/vendor.bundle.base.js"></script>
+@yield('script')
 <!-- endinject -->
 <!-- Plugin js for this page-->
 <script src="{!! url('/') !!}/vendors/chart.js/Chart.min.js"></script>
@@ -598,7 +600,8 @@
 <script src="{!! url('/') !!}/js/jquery.dataTables.js"></script>
 <script src="{!! url('/') !!}/js/dataTables.bootstrap4.js"></script>
 <!-- End custom js for this page-->
+
 </body>
-@yield('script')
+
 </html>
 

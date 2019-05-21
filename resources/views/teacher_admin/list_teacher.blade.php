@@ -41,14 +41,15 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">{!! trans('messages.teacher.list_teacher') !!}</h3>
                     </div>
-                    <div class="panel-body search-form" id="landing-teacher-list">
                         <div class="row">
                             <div class="col-sm-12 text-right">
                                 <button class="btn btn-primary mt-2 mt-xl-0 text-right add-teacher"><i class="mdi mdi-account-multiple-plus"></i>  {!! trans('messages.teacher.list_teacher') !!}</button>
                             </div>
                         </div>
                         <br>
-                        @include('teacher_admin.list_teacher_element')
+                    <div class="panel-body search-form" id="landing-teacher-list">
+
+                    @include('teacher_admin.list_teacher_element')
                     </div>
                 </div>
             </div>

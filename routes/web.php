@@ -23,3 +23,10 @@ Route::post('/admin/edit_teacher','Admin\AdminTeacherController@edit');
 Route::post('admin/edit_teacher_form','Admin\AdminTeacherController@update');
 Route::post('product/delete_product','Admin\AdminTeacherController@destroy');
 
+//Admin Student
+Route::any('/admin/student','Admin\StudentController@index');
+Route::post('/admin/insert_student','Admin\StudentController@create');
+Route::post('/admin/view_student','Admin\StudentController@show');
+Route::post('/admin/edit_student','Admin\StudentController@edit');
+Route::post('/admin/edit_student_form','Admin\StudentController@update');
+Route::post('/student/delete_student','Admin\StudentController@destroy');

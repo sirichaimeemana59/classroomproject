@@ -5,6 +5,12 @@ return [
     'name' => 'Name',
     'id' => 'Teacher ID',
     'reset' => 'Reset',
+    'number' => 'Number',
+    'photo' => 'Photo',
+    'name-last' => 'Name - Lastname',
+    'tell' => 'Tell',
+    'action' => 'Action',
+    'no-data' => 'Sorry Query Data',
 
     'teacher'=>[
         'list_teacher' => 'Teacher',

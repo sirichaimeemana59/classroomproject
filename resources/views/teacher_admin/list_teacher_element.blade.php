@@ -1,13 +1,16 @@
 <div class="row">
     <div class="table-responsive table-striped">
-        <table class="table" width="100%">
+        <table cellspacing="0" class="table table-bordered table-striped">
+            <thead>
             <tr>
-                <th>ลำดับ</th>
-                <th>รูป</th>
-                <th>ชื่อ - สกุล</th>
-                <th>เบอร์โทร</th>
-                <th>Action</th>
+                <th>{!! trans('messages.number') !!}</th>
+                <th>{!! trans('messages.photo') !!}</th>
+                <th>{!! trans('messages.name-last') !!}</th>
+                <th>{!! trans('messages.tell') !!}</th>
+                <th>{!! trans('messages.action') !!}</th>
             </tr>
+            </thead>
+            <tbody>
             @if(!empty($teacher))
             @foreach($teacher as $key => $row)
                 <tr>
@@ -24,10 +27,11 @@
                 @endforeach
                 @else
                 <tr>
-                    <td>ไม่พบข้อมูล</td>
+                    <td>{!! trans('messages.no-data') !!}</td>
                 </tr>
 
             @endif
+            </tbody>
         </table>
     </div>
 </div>

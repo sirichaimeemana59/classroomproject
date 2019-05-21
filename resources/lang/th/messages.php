@@ -5,6 +5,12 @@ return [
     'name' => 'ชื่อ',
     'id' => 'รหัสอาจารย์',
     'reset' => 'ยกเลิก',
+    'number' => 'ลำดับ',
+    'photo' => 'รูป',
+    'name-last' => 'ชื่อ - สกุล',
+    'tell' => 'เบอร์โทร',
+    'action' => 'Action',
+    'no-data' => 'ไม่พบข้อมูล',
 
     'teacher'=>[
         'list_teacher' => 'อาจารย์',
