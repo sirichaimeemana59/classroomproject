@@ -39,3 +39,6 @@ Route::post('/teacher/view_subject','Teacher\TeacherController@show');
 Route::post('/teacher/edit_subject','Teacher\TeacherController@edit');
 Route::post('/teacher/edit_subject/form','Teacher\TeacherController@update');
 Route::post('/teacher/delete_subject','Teacher\TeacherController@destroy');
+
+//Student
+Route::any('/student/home','Student\StudentController@index');
