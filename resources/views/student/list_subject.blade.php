@@ -128,12 +128,13 @@
                 var start = $(this).data('start');
                 var stop = $(this).data('stop');
                 var name_teacher = $(this).data('name_teacher');
+                var id_teacher = $(this).data('id_teacher');
 
 
 
                 var data = ['<tr class="itemRow">',
                     '<td></td>',
-                    '<td><input type="hidden" name="id_subject[]" value="'+id+'"><span>'+name+'</span></td>',
+                    '<td><input type="hidden" name="id_subject[]" value="'+id+'"><input type="hidden" name="id_teacher[]" value="'+id_teacher+'"><span>'+name+'</span></td>',
                     '<td><span>'+start+'</span></td>',
                     '<td><span>'+stop+'</span></td>',
                     '<td><span>'+name_teacher+'</span></td>',

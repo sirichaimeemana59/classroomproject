@@ -15,6 +15,15 @@ return [
     'Registered_courses' => 'Registered courses',
     'class_schedule' => 'Class Schedule',
     'day_time'=>'Day/Time',
+    'Approval_of_registration'=>'Approval of registration',
+    'day_' => 'Day',
+    'Class_Start' => 'Class_Start',
+    'Class_Finish' => 'Class_Finish',
+    'select_day' => 'Please Select Day',
+    'select_time' => 'Please Select Time',
+    'status' => 'Status',
+    'approved' => 'Approved',
+    'no_approved' => 'None Approved',
 
     'teacher'=>[
         'list_teacher' => 'Teacher',

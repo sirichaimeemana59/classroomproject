@@ -15,6 +15,15 @@ return [
     'Registered_courses' => 'รายวิชาที่ลงทะเบียน',
     'class_schedule' => 'ตารางเรียน',
     'day_time'=>'วัน/เวลา',
+    'Approval_of_registration'=>'อนุมัติการลงทะเบียน',
+    'day_' => 'วัน',
+    'Class_Start' => 'เริ่มเรียน',
+    'Class_Finish' => 'เลิกเรียน',
+    'select_time' => 'กรุณาเลือกเวลา',
+    'select_day' => 'กรุณาเลือกวัน',
+    'status' => 'สถานะ',
+    'approved' => 'อนุมัติ',
+    'no_approved' => 'ยังไม่ได้อนุมัติ',
 
     'teacher'=>[
         'list_teacher' => 'อาจารย์',

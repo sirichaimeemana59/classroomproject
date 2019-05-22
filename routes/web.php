@@ -39,6 +39,8 @@ Route::post('/teacher/view_subject','Teacher\TeacherController@show');
 Route::post('/teacher/edit_subject','Teacher\TeacherController@edit');
 Route::post('/teacher/edit_subject/form','Teacher\TeacherController@update');
 Route::post('/teacher/delete_subject','Teacher\TeacherController@destroy');
+Route::get('/teacher/approval_of_registration','Teacher\TeacherController@approval_of_registration');
+Route::post('/teacher/approval_of_registration/set_status','Teacher\TeacherController@approval_set_status');
 
 //Student
 Route::any('/student/home','Student\StudentController@index');

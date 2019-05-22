@@ -86,9 +86,24 @@
 
                                 <div class="form-group row">
                                     <lable class="col-sm-2 control-label">{!! trans('messages.subjects.amount') !!}</lable>
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-4">
                                         {{--<textarea name="detail" class="form-control" id="" cols="60" rows="10" style="margin: 0px -295.672px 0px 0px; width: 466px; height: 211px;"></textarea>--}}
                                         {!! Form::number('amount',null,array('class'=>'form-control','max'=>50,'min'=>1),'required') !!}
+                                    </div>
+
+                                    <lable class="col-sm-2 control-label">{!! trans('messages.day_') !!}</lable>
+                                    <div class="col-sm-4">
+                                        {{--<textarea name="detail" class="form-control" id="" cols="60" rows="10" style="margin: 0px -295.672px 0px 0px; width: 466px; height: 211px;"></textarea>--}}
+                                        <select name="day" id="" required class="form-control">
+                                            <option value="">--{!! trans('messages.select_day') !!}--</option>
+                                            <option value="0">{!! trans('messages.day.Monday') !!}</option>
+                                            <option value="1">{!! trans('messages.day.Tuesday') !!}</option>
+                                            <option value="2">{!! trans('messages.day.Wednesday') !!}</option>
+                                            <option value="3">{!! trans('messages.day.Thursday') !!}</option>
+                                            <option value="4">{!! trans('messages.day.Friday')!!}</option>
+                                            <option value="5">{!! trans('messages.day.Saturday')!!}</option>
+                                            <option value="6">{!! trans('messages.day.Sunday') !!}</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -96,12 +111,40 @@
 
                                     <lable class="col-sm-2 control-label">{!! trans('messages.subjects.time_start') !!}</lable>
                                     <div class="col-sm-4">
-                                        {!! Form::time('time_start',null,array('class'=>'form-control','placeholder'=>trans('messages.subjects.time_start'),'required')) !!}
+                                        <select name="time_start" id="" required class="form-control">
+                                            <option value="">--{!! trans('messages.select_time') !!}--</option>
+                                            <option value="0">08:30</option>
+                                            <option value="1">09:20</option>
+                                            <option value="2">10:15</option>
+                                            <option value="3">11:05</option>
+                                            <option value="4">11:55</option>
+                                            <option value="5">12:45</option>
+                                            <option value="6">13:35</option>
+                                            <option value="7">14:30</option>
+                                            <option value="8">15:20 </option>
+                                            <option value="9">16:10</option>
+                                            <option value="10">17:00</option>
+                                            <option value="11">18:10</option>
+                                        </select>
                                     </div>
 
                                     <lable class="col-sm-2 control-label">{!! trans('messages.subjects.time_stop') !!}</lable>
                                     <div class="col-sm-4">
-                                        {!! Form::time('time_stop',null,array('class'=>'form-control','placeholder'=>trans('messages.subjects.time_stop'),'required')) !!}
+                                        <select name="time_stop" id="" required class="form-control">
+                                            <option value="">--{!! trans('messages.select_time') !!}--</option>
+                                            <option value="0">09:20</option>
+                                            <option value="1">10:10</option>
+                                            <option value="2">11:05</option>
+                                            <option value="3">11:55</option>
+                                            <option value="4">12:45</option>
+                                            <option value="5">13:35</option>
+                                            <option value="6">14:30</option>
+                                            <option value="7">15:20</option>
+                                            <option value="8">16:10 </option>
+                                            <option value="9">17:00</option>
+                                            <option value="10">17:50</option>
+                                            <option value="11">19:50</option>
+                                        </select>
                                     </div>
 
                                 </div>

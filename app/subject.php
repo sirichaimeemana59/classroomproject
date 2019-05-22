@@ -8,7 +8,7 @@ class subject extends Model
 {
     protected $primaryKey = 'id_subject';
     protected $table = 'subjects';
-    protected $fillable = ['user_create,name_subject_th,name_subject_en,amount,time_start,time_stop'];
+    protected $fillable = ['user_create,name_subject_th,name_subject_en,amount,time_start,time_stop,day'];
     public $timestamps = true;
 
     public function join_teacher ()

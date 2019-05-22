@@ -6,6 +6,7 @@ use Request;
 use App\Http\Controllers\Controller;
 use App\subject;
 use Auth;
+use App\register_courses;
 
 class TeacherController extends Controller
 {
@@ -42,6 +43,7 @@ class TeacherController extends Controller
         $subject->time_start = Request::get('time_start');
         $subject->time_stop = Request::get('time_stop');
         $subject->user_create = Auth::user()->id;
+        $subject->day = Request::get('day');
         $subject->save();
 
         return redirect('/teacher/list_subject');
@@ -91,5 +93,21 @@ class TeacherController extends Controller
         $subject->delete();
 
         return redirect('/teacher/list_subject');
+    }
+
+    public function approval_of_registration(){
+        $register_courses = new register_courses;
+        $register_courses = $register_courses->where('id_teacher',Auth::user()->id)->get();
+
+        return view('Teacher.approval_of_registration')->with(compact('register_courses'));
+    }
+
+    public  function approval_set_status(){
+        $register_courses = register_courses::find(Request::get('id'));
+        $register_courses->status = '1';
+        $register_courses->user_approve = Auth::user()->id;
+        $register_courses->save();
+
+        return redirect('/teacher/approval_of_registration');
     }
 }

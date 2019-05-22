@@ -78,17 +78,25 @@ class StudentController extends Controller
             $register_courses = new register_courses;
             $register_courses->id_subject = Request::get('id_subject')[$i];
             $register_courses->user_create = Auth::user()->id;
+            $register_courses->id_teacher = Request::get('id_teacher')[$i];
             $register_courses->save();
+
+            $subject = subject::find(Request::get('id_subject')[$i]);
+            $subject->amount = $subject->amount - 1;
+            $subject->save();
             }
 
-        return redirect('Student.show_courses');
+        return redirect('student/list_subject');
     }
 
     public function class_schedule(){
 
         $register_courses = new register_courses;
-        $register_courses =$register_courses->where('user_create',Auth::user()->id)->get();
+        $register_courses =$register_courses->where('user_create',Auth::user()->id)->where('status',1)->get();
 
-        return view('Student.show_courses')->with(compact('register_courses'));
+        $register_courses_ = new register_courses;
+        $register_courses_ =$register_courses_->where('user_create',Auth::user()->id)->get();
+
+        return view('Student.show_courses')->with(compact('register_courses','register_courses_'));
     }
 }
