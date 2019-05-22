@@ -42,3 +42,6 @@ Route::post('/teacher/delete_subject','Teacher\TeacherController@destroy');
 
 //Student
 Route::any('/student/home','Student\StudentController@index');
+Route::get('/student/list_subject','Student\StudentController@show_subject');
+Route::post('/student/register_courses','Student\StudentController@register_courses');
+Route::get('/student/class_schedule','Student\StudentController@class_schedule');

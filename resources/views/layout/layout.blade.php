@@ -186,8 +186,10 @@
         <!-- partial:partials/_sidebar.html -->
             @if(Auth::user()->role == 1)
                 @include('layout.menu_admin')
-            @else(Auth::user()->role == 2)
+            @elseif(Auth::user()->role == 2)
                 @include('layout.menu_teacher')
+            @else(Auth::user()->role == 0)
+                @include('layout.menu_student')
             @endif
         <!-- partial -->
         <div class="main-panel">
