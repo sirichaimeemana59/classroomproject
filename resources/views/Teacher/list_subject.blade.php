@@ -63,8 +63,8 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header" style="background-color: #9BA2AB;">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title" style="color: #bbbfc3;">{!! trans('messages.subjects.list_subjects') !!}</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -149,6 +149,28 @@
 
                                 </div>
 
+                                <div class="form-group row">
+                                    <lable class="col-sm-2 control-label">{!! trans('messages.Add_class') !!}</lable>
+                                    <div class="col-sm-4">
+                                        <a class="btn btn-primary mt-2 mt-xl-0 text-right add-class" ><i class="mdi mdi-spellcheck"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row add-class-more">
+                                    <lable class="col-sm-2 control-label"></lable>
+                                    <div class="col-sm-10">
+                                        <table class="table table-responsive itemTables" style="width: 100%">
+                                            <tr>
+                                                <th ></th>
+                                                <th>{!! trans('messages.day_study') !!}</th>
+                                                <th>{!! trans('messages.subjects.time_start') !!}</th>
+                                                <th>{!! trans('messages.subjects.time_stop') !!}</th>
+                                                <th>{!! trans('messages.action') !!}</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
                                 <div class="form-group row float-center" style="text-align: center; ">
                                     <div class="col-sm-12">
                                         <button class="btn-info btn-primary" type="submit">Save</button>
@@ -222,6 +244,73 @@
         </div>
     </div>
     <!-- End Modal edit teacher-->
+<?php
+    $day = array(
+        0 => trans('messages.day.Monday'),
+        1 => trans('messages.day.Tuesday'),
+        2 => trans('messages.day.Wednesday'),
+        3 => trans('messages.day.Thursday'),
+        4 => trans('messages.day.Friday'),
+        5 => trans('messages.day.Saturday'),
+        6 => trans('messages.day.Sunday')
+    );
+
+    $time_start = array(
+        0 => "08:30",
+        1 => "09:20",
+        2 => "10:15",
+        3 => "11:05",
+        4 => "11:55",
+        5 => "12:45",
+        6 => "13:35",
+        7 => "14:30",
+        8 => "15:20",
+        9 => "16:10",
+        10 => "17:00",
+        11 => "18:10"
+    );
+
+    $time_stop = array(
+        0 => "08:30",
+        1 => "09:20",
+        2 => "10:15",
+        3 => "11:05",
+        4 => "11:55",
+        5 => "12:45",
+        6 => "13:35",
+        7 => "14:30",
+        8 => "15:20",
+        9 => "16:10",
+        10 => "17:00",
+        11 => "18:10"
+    );
+?>
+    <div id="day-template" style="display:none;">
+        <select name="data[0][day_class]"  class="toValidate form-control input-sm price_service"  required>
+            <option value="">{!! trans('messages.select_day') !!}</option>
+            @foreach($day as $key => $row)
+                <option value="{!!$key!!}">{!!$row!!}</option>
+            @endforeach
+        </select>
+    </div>
+
+    <div id="time-start-template" style="display:none;">
+        <select name="data[0][time_start]"  class="toValidate form-control input-sm price_service"  required>
+            <option value="">{!! trans('messages.select_time') !!}</option>
+            @foreach($time_start as $key => $row)
+                <option value="{!!$key!!}">{!!$row!!}</option>
+            @endforeach
+        </select>
+    </div>
+
+    <div id="time-stop-template" style="display:none;">
+        <select name="data[0][time_stop]"  class="toValidate form-control input-sm price_service"  required>
+            <option value="">{!! trans('messages.select_time') !!}</option>
+            @foreach($time_stop as $key => $row)
+                <option value="{!!$key!!}">{!!$row!!}</option>
+            @endforeach
+        </select>
+    </div>
 @endsection
 
 @section('script')
@@ -331,6 +420,40 @@
                     }
                 });
             });
+
+            $('.add-class-more').hide();
+        $('.add-class').on('click',function(){
+            $('.add-class-more').show();
+
+            var time = $.now();
+            var day = '<select name="data['+time+'][day_class]" class="day_class">'+ $('#day-template select').html() + '</select>';
+            var time_start = '<select name="data['+time+'][time_start]" class="time_start">'+ $('#time-start-template select').html() + '</select>';
+            var time_stop = '<select name="data['+time+'][time_stop]" class="time_stop">'+ $('#time-stop-template select').html() + '</select>';
+
+
+            var data = ['<tr class="itemRow">',
+                '<td></td>',
+                '<td>'+day+'</td>',
+                '<td>'+time_start+'</td>',
+                '<td>'+time_stop+'</td>',
+                '<td><a class="btn btn-danger delete-subject"><i class="mdi mdi-delete-sweep"></i></a></td>',
+            ];
+
+            data.push(
+                '<td><div class="text-right">' +
+                '<span class="colTotal"></span> </div><input class="tLineTotal" name="" type="hidden"></td>','</tr>');
+            data = data.join('');
+
+            $('.itemTables').append(data);
+            $('.save-regis').show();
+
+        });
+
+        $('.itemTables').on("click", '.delete-subject', function() {
+            //alert('aaa');
+            $(this).closest('tr.itemRow').remove();
+            //return false;
+        });
         });
     </script>
     @endsection

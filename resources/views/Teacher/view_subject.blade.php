@@ -1,30 +1,4 @@
-{!! Form::model($subject,array('url' => array('teacher/insert_subject'),'class'=>'form-horizontal','id'=>'form_add','method'=>'post','enctype'=>'multipart/form-data')) !!}
-<div class="form-group row">
-    <lable class="col-sm-2 control-label">{!! trans('messages.subjects.subject_th') !!}</lable>
-    <div class="col-sm-4">
-        {!! Form::text('name_subject_th',null,array('class'=>'form-control','placeholder'=>trans('messages.subjects.subject_th'),'required','readonly')) !!}
-    </div>
-
-    <lable class="col-sm-2 control-label">{!! trans('messages.subjects.subject_th') !!}</lable>
-    <div class="col-sm-4">
-        {!! Form::text('name_subject_en',null,array('class'=>'form-control','placeholder'=>trans('messages.subjects.subject_th'),'required','readonly')) !!}
-    </div>
-</div>
-
-
-<div class="form-group row">
-    <lable class="col-sm-2 control-label">{!! trans('messages.subjects.amount') !!}</lable>
-    <div class="col-sm-10">
-        {{--<textarea name="detail" class="form-control" id="" cols="60" rows="10" style="margin: 0px -295.672px 0px 0px; width: 466px; height: 211px;"></textarea>--}}
-        {!! Form::number('amount',null,array('class'=>'form-control','max'=>50,'min'=>1),'required','readonly','disable') !!}
-    </div>
-</div>
-
-<div class="form-group row">
-
-    <lable class="col-sm-2 control-label">{!! trans('messages.subjects.time_start') !!}</lable>
-    <div class="col-sm-4">
-        <?php
+    <?php
         $time_start = array(
             0 => "08:30",
             1 => "09:20",
@@ -55,26 +29,62 @@
             11 => "18:10"
         );
 
-        ?>
-        <select name="time_start" id="" required class="form-control" disabled>
-            <option value="">--{!! trans('messages.select_time') !!}--</option>
-            @foreach($time_start as $key => $row)
-                @if($key == $subject->time_start)
-                <option value="{!! $key !!}" selected>{!! $row !!}</option>
-                @endif
-                @endforeach
-        </select>
+        $day = array(
+            0 => trans('messages.day.Monday'),
+            1 => trans('messages.day.Tuesday'),
+            2 => trans('messages.day.Wednesday'),
+            3 => trans('messages.day.Thursday'),
+            4 => trans('messages.day.Friday'),
+            5 => trans('messages.day.Saturday'),
+            6 => trans('messages.day.Sunday')
+        );
+    ?>
+    <div class="form-group row">
+        <lable class="col-sm-2 control-label">{!! trans('messages.subjects.subject_th') !!}   </lable>
+        <div class="col-sm-4">
+            :     {!! $subject->{'name_subject_'.Session::get('locale')} !!}
+        </div>
+
+        <lable class="col-sm-2 control-label">{!! trans('messages.teacher.list_teacher') !!}</lable>
+        <div class="col-sm-4">
+            :     {!! $subject->join_teacher->name_teacher !!}  {!! $subject->join_teacher->lastname_teacher !!}
+        </div>
     </div>
 
-    <lable class="col-sm-2 control-label">{!! trans('messages.subjects.time_stop') !!}</lable>
-    <div class="col-sm-4">
-        <select name="time_start" id="" required class="form-control" disabled>
-            <option value="">--{!! trans('messages.select_time') !!}--</option>
-            @foreach($time_stop as $key => $row)
-                @if($key == $subject->time_stop)
-                    <option value="{!! $key !!}" selected>{!! $row !!}</option>
-                @endif
-            @endforeach
-        </select>
+    <div class="form-group row">
+        <lable class="col-sm-2 control-label">{!! trans('messages.subjects.amount') !!}   </lable>
+        <div class="col-sm-4">
+            :     {!! $subject->amount !!} {!! trans('messages.person') !!}
+        </div>
     </div>
-</div>
+
+    @if(count($subject->join_subjects_transection) != 0)
+        @foreach($subject->join_subjects_transection as $key => $row)
+            <div class="form-group row">
+                <lable class="col-sm-2 control-label">{!! trans('messages.day_study') !!}   </lable>
+                <div class="col-sm-10">
+                    {!! $day[$row->day] !!}
+                </div>
+
+                <lable class="col-sm-2 control-label">{!! trans('messages.time_class') !!}   </lable>
+                <div class="col-sm-10">
+                    <lable class="col-sm-2 control-label">{!! trans('messages.Class_Start') !!}   </lable> : {!! $time_start[$row->time_start] !!}
+                    <lable class="col-sm-2 control-label">{!! trans('messages.Class_Finish') !!}   </lable> : {!! $time_stop[$row->time_stop] !!}
+                </div>
+            </div>
+        @endforeach
+        @else
+            <div class="form-group row">
+                <lable class="col-sm-2 control-label">{!! trans('messages.day_study') !!}   </lable>
+                <div class="col-sm-10">
+                    {!! $day[$subject->day] !!}
+                </div>
+
+                <lable class="col-sm-2 control-label">{!! trans('messages.time_class') !!}   </lable>
+                <div class="col-sm-10">
+                    <lable class="col-sm-2 control-label">{!! trans('messages.Class_Start') !!}   </lable> : {!! $time_start[$subject->time_start] !!}
+                    <lable class="col-sm-2 control-label">{!! trans('messages.Class_Finish') !!}   </lable> : {!! $time_stop[$subject->time_stop] !!}
+                </div>
+            </div>
+    @endif
+

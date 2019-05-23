@@ -24,6 +24,13 @@ return [
     'status' => 'สถานะ',
     'approved' => 'อนุมัติ',
     'no_approved' => 'ยังไม่ได้อนุมัติ',
+    'danger_regis' => 'ขออภัยเนื่องจากมีรายวิชาซ้ำ กรุณาตรวจสอบ',
+    'waring_regis'=>'ขอผิดพลาด!',
+    'day_study'=>'วันที่เรียน',
+    'time_study' => 'เวลาเรียน',
+    'Add_class' => 'เพิ่มวันเรียน',
+    'person' => 'คน',
+    'time_class'=>'เวลา',
 
     'teacher'=>[
         'list_teacher' => 'อาจารย์',

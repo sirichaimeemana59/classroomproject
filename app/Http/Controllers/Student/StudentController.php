@@ -52,7 +52,7 @@ class StudentController extends Controller
         //
     }
 
-    public function show_subject(){
+    public function show_subject($text = null){
         $subject = new subject;
 
         if(Request::method('post')) {
@@ -65,9 +65,9 @@ class StudentController extends Controller
         $subject = $subject->get();
 
         if(!Request::ajax()) {
-            return view('Student.list_subject')->with(compact('subject'));
+            return view('Student.list_subject')->with(compact('subject','text'));
         }else{
-            return view('Student.list_subject_element')->with(compact('subject'));
+            return view('Student.list_subject_element')->with(compact('subject','text'));
         }
 
     }
@@ -75,15 +75,26 @@ class StudentController extends Controller
     public function register_courses(){
         $count = count(Request::get('id_subject'));
         for ($i = 0;$i < $count;$i++) {
-            $register_courses = new register_courses;
-            $register_courses->id_subject = Request::get('id_subject')[$i];
-            $register_courses->user_create = Auth::user()->id;
-            $register_courses->id_teacher = Request::get('id_teacher')[$i];
-            $register_courses->save();
 
-            $subject = subject::find(Request::get('id_subject')[$i]);
-            $subject->amount = $subject->amount - 1;
-            $subject->save();
+            $find = new register_courses;
+            $find = $find->where('id_subject',Request::get('id_subject')[$i])
+                    ->where('user_create',Auth::user()->id)->get();
+
+            if($find){
+                $text = 1;
+                return redirect('student/list_subject/'.$text);
+            }else{
+                $register_courses = new register_courses;
+                $register_courses->id_subject = Request::get('id_subject')[$i];
+                $register_courses->user_create = Auth::user()->id;
+                $register_courses->id_teacher = Request::get('id_teacher')[$i];
+                $register_courses->save();
+
+                $subject = subject::find(Request::get('id_subject')[$i]);
+                $subject->amount = $subject->amount - 1;
+                $subject->save();
+            }
+
             }
 
         return redirect('student/list_subject');
@@ -98,5 +109,12 @@ class StudentController extends Controller
         $register_courses_ =$register_courses_->where('user_create',Auth::user()->id)->get();
 
         return view('Student.show_courses')->with(compact('register_courses','register_courses_'));
+    }
+
+    public  function delete_courses(){
+        $register_courses =  register_courses::find(Request::get('id'));
+        $register_courses->delete();
+
+        return redirect('student/class_schedule');
     }
 }

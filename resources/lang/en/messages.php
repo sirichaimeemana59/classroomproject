@@ -24,6 +24,13 @@ return [
     'status' => 'Status',
     'approved' => 'Approved',
     'no_approved' => 'None Approved',
+    'danger_regis' => 'Sorry, due to repeated courses, please check',
+    'waring_regis'=>'Warning!',
+    'day_study'=>'Date of study',
+    'time_study' => 'Time of Study',
+    'Add_class' => 'Add class',
+    'person' => 'Person',
+    'time_class'=>'Time',
 
     'teacher'=>[
         'list_teacher' => 'Teacher',

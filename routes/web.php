@@ -43,7 +43,8 @@ Route::get('/teacher/approval_of_registration','Teacher\TeacherController@approv
 Route::post('/teacher/approval_of_registration/set_status','Teacher\TeacherController@approval_set_status');
 
 //Student
-Route::any('/student/home','Student\StudentController@index');
-Route::get('/student/list_subject','Student\StudentController@show_subject');
+Route::any('/student/home','Student\StudentController@show_subject');
+Route::any('/student/list_subject/{text?}','Student\StudentController@show_subject');
 Route::post('/student/register_courses','Student\StudentController@register_courses');
 Route::get('/student/class_schedule','Student\StudentController@class_schedule');
+Route::post('/student/delete_courses','Student\StudentController@delete_courses');

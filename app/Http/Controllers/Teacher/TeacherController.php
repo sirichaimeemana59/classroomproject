@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\subject;
 use Auth;
 use App\register_courses;
+use App\subjects_transection;
 
 class TeacherController extends Controller
 {
@@ -36,6 +37,14 @@ class TeacherController extends Controller
 
     public function create()
     {
+        $characters = '0123456789';
+        $charactersLength = strlen($characters);
+        $randstring = '';
+        for ($i = 0; $i < 5; $i++) {
+            $randstring .= $characters[rand(0, $charactersLength - 1)];
+        }
+
+        //dump(Request::get('data'));
         $subject = new subject;
         $subject->name_subject_th = Request::get('name_subject_th');
         $subject->name_subject_en = Request::get('name_subject_en');
@@ -44,7 +53,20 @@ class TeacherController extends Controller
         $subject->time_stop = Request::get('time_stop');
         $subject->user_create = Auth::user()->id;
         $subject->day = Request::get('day');
+        $subject->code_subject = $randstring;
         $subject->save();
+
+
+        foreach (Request::get('data') as $t) {
+            $subjects_transection = new subjects_transection;
+            $subjects_transection->day = $t['day_class'];
+            $subjects_transection->time_start = $t['time_start'];
+            $subjects_transection->time_stop = $t['time_stop'];
+            $subjects_transection->user_create = Auth::user()->id;
+            $subjects_transection->id_subject = $randstring;
+            $subjects_transection->save();
+            //dump($subjects_transection);
+        }
 
         return redirect('/teacher/list_subject');
     }

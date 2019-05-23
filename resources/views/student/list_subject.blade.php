@@ -2,6 +2,11 @@
 @section('content')
     {{--{!! Session::get('locale') !!}--}}
     {{-- //search --}}
+    @if(!empty($text))
+        <div class="alert alert-danger">
+            <strong>{!! trans('messages.waring_regis') !!}</strong> {!! trans('messages.danger_regis') !!}
+        </div>
+        @endif
     <div class="row">
         <div class="col-md-12 stretch-card">
             <div class="card">
@@ -97,7 +102,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="4"></td>
-                                    <td style="text-align: right;"><button class="btn btn-primary mt-2 mt-xl-0 text-right" type="submit"><i class="mdi mdi-package-down"></i></button></td>
+                                    <td style="text-align: right;"><button class="btn btn-primary mt-2 mt-xl-0 text-right save-regis" type="submit"><i class="mdi mdi-package-down"></i></button></td>
                                 </tr>
                             </table>
                             {!! Form::close() !!}
@@ -114,7 +119,7 @@
 @section('script')
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript">
-        $(function() {
+        $(document).ready(function() {
 
             $.ajaxSetup({
                 headers: {
@@ -122,6 +127,7 @@
                 }
             });
 
+            $('.save-regis').hide();
             $('.register-courses').on('click',function(){
                 var id = $(this).data('id');
                 var name = $(this).data('name');
@@ -147,6 +153,7 @@
                 data = data.join('');
 
                 $('.itemTables').append(data);
+                $('.save-regis').show();
 
             });
 
@@ -154,6 +161,31 @@
                 //alert('aaa');
                 $(this).closest('tr.itemRow').remove();
                 //return false;
+            });
+
+            $('.search-subject').on('click',function(){
+                var data  = $('#search-form').serialize();
+                //alert('aa');
+                //console.log(data);
+                $('#landing-subject-list').css('opacity','0.6');
+                $.ajax({
+                    url : '/student/home',
+                    method : 'post',
+                    dataType : 'html',
+                    data : data,
+                    success : function(e){
+                        $('#landing-subject-list').css('opacity','1').html(e);
+                    } ,error : function(){
+                        console.log('Error Search Data subject');
+                    }
+                });
+            });
+
+            $('.reset-s-btn').on('click',function () {
+                $(this).closest('form').find("input").val("");
+                $(this).closest('form').find("select option:selected").removeAttr('selected');
+                //propertyPageSale (1);
+                window.location.href ='/student/home';
             });
 
         });
