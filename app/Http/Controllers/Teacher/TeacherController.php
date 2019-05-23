@@ -86,9 +86,9 @@ class TeacherController extends Controller
     }
 
 
-    public function edit()
+    public function edit($id = null)
     {
-        $subject = subject::find(Request::get('id'));
+        $subject = subject::find($id);
 
         return view ('Teacher.edit_subject')->with(compact('subject'));
     }
@@ -103,9 +103,23 @@ class TeacherController extends Controller
         $subject->time_start = Request::get('time_start');
         $subject->time_stop = Request::get('time_stop');
         $subject->user_create = Auth::user()->id;
+        $subject->day = Request::get('day');
         $subject->save();
 
+        if(!empty(Request::get('data'))){
+            foreach (Request::get('data') as $t){
+                $subjects_transection =  subjects_transection::find($t['id_subjects_transection']);
+                $subjects_transection->day = $t['day_class'];
+                $subjects_transection->time_start = $t['time_start'];
+                $subjects_transection->time_stop = $t['time_stop'];
+                $subjects_transection->user_create = Auth::user()->id;
+                $subjects_transection->id_subject = $t['code_subject'];
+                $subjects_transection->save();
+                //dump($t['id_subjects_transection']);
+            }
+        }
 
+        return redirect('teacher/list_subject');
     }
 
 
@@ -131,5 +145,12 @@ class TeacherController extends Controller
         $register_courses->save();
 
         return redirect('/teacher/approval_of_registration');
+    }
+
+    public  function delete_subject_transection(){
+        $subjects_transection =  subjects_transection::find(Request::get('id'));
+        $subjects_transection->delete();
+
+        return redirect('teacher/edit_subject/'.Request::get('id'));
     }
 }

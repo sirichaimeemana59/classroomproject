@@ -58,22 +58,7 @@
         </div>
     </div>
 
-    @if(count($subject->join_subjects_transection) != 0)
-        @foreach($subject->join_subjects_transection as $key => $row)
-            <div class="form-group row">
-                <lable class="col-sm-2 control-label">{!! trans('messages.day_study') !!}   </lable>
-                <div class="col-sm-10">
-                    {!! $day[$row->day] !!}
-                </div>
 
-                <lable class="col-sm-2 control-label">{!! trans('messages.time_class') !!}   </lable>
-                <div class="col-sm-10">
-                    <lable class="col-sm-2 control-label">{!! trans('messages.Class_Start') !!}   </lable> : {!! $time_start[$row->time_start] !!}
-                    <lable class="col-sm-2 control-label">{!! trans('messages.Class_Finish') !!}   </lable> : {!! $time_stop[$row->time_stop] !!}
-                </div>
-            </div>
-        @endforeach
-        @else
             <div class="form-group row">
                 <lable class="col-sm-2 control-label">{!! trans('messages.day_study') !!}   </lable>
                 <div class="col-sm-10">
@@ -85,6 +70,18 @@
                     <lable class="col-sm-2 control-label">{!! trans('messages.Class_Start') !!}   </lable> : {!! $time_start[$subject->time_start] !!}
                     <lable class="col-sm-2 control-label">{!! trans('messages.Class_Finish') !!}   </lable> : {!! $time_stop[$subject->time_stop] !!}
                 </div>
-            </div>
-    @endif
+             @if(count($subject->join_subjects_transection) != 0)
+                @foreach($subject->join_subjects_transection as $key => $row)
+                        <lable class="col-sm-2 control-label">{!! trans('messages.day_study') !!}   </lable>
+                            <div class="col-sm-10">
+                                {!! $day[$row->day] !!}
+                            </div>
 
+                    <lable class="col-sm-2 control-label">{!! trans('messages.time_class') !!}   </lable>
+                        <div class="col-sm-10">
+                            <lable class="col-sm-2 control-label">{!! trans('messages.Class_Start') !!}   </lable> : {!! $time_start[$row->time_start] !!}
+                            <lable class="col-sm-2 control-label">{!! trans('messages.Class_Finish') !!}   </lable> : {!! $time_stop[$row->time_stop] !!}
+                        </div>
+                @endforeach
+            @endif
+            </div>

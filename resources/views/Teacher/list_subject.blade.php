@@ -453,7 +453,34 @@
             //alert('aaa');
             $(this).closest('tr.itemRow').remove();
             //return false;
-        });
+            });
+
+            $('.delete-subject-transection').on('click',function(){
+                var id = $(this).data('id');
+                swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                }).then((willDelete)=> {
+                    if (willDelete) {
+                        setTimeout(function() {
+                            $.post("", {
+                                id: id
+                            }, function(e) {
+                                swal("Poof! Your imaginary file has been deleted!", {
+                                    icon: "success",
+                                }).then(function(){
+                                    window.location.href ='/teacher/list_subject'
+                                });
+                            });
+                        }, 50);
+                    } else {
+                        swal("Your imaginary file is safe!");
+                    }
+                });
+            });
         });
     </script>
     @endsection

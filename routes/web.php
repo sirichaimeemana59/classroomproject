@@ -36,11 +36,12 @@ Route::get('/teacher/home','Teacher\TeacherController@index');
 Route::any('/teacher/list_subject','Teacher\TeacherController@index');
 Route::post('/teacher/insert_subject','Teacher\TeacherController@create');
 Route::post('/teacher/view_subject','Teacher\TeacherController@show');
-Route::post('/teacher/edit_subject','Teacher\TeacherController@edit');
+Route::get('/teacher/edit_subject/{id?}','Teacher\TeacherController@edit');
 Route::post('/teacher/edit_subject/form','Teacher\TeacherController@update');
 Route::post('/teacher/delete_subject','Teacher\TeacherController@destroy');
 Route::get('/teacher/approval_of_registration','Teacher\TeacherController@approval_of_registration');
 Route::post('/teacher/approval_of_registration/set_status','Teacher\TeacherController@approval_set_status');
+Route::post('teacher/delete/subject_transection','Teacher\TeacherController@delete_subject_transection');
 
 //Student
 Route::any('/student/home','Student\StudentController@show_subject');
