@@ -80,7 +80,7 @@ class StudentController extends Controller
             $find = $find->where('id_subject',Request::get('id_subject')[$i])
                     ->where('user_create',Auth::user()->id)->get();
 
-            if($find){
+            if(count($find) != 0){
                 $text = 1;
                 return redirect('student/list_subject/'.$text);
             }else{
@@ -88,11 +88,12 @@ class StudentController extends Controller
                 $register_courses->id_subject = Request::get('id_subject')[$i];
                 $register_courses->user_create = Auth::user()->id;
                 $register_courses->id_teacher = Request::get('id_teacher')[$i];
+                $register_courses->code_subject = Request::get('code_subject')[$i];
                 $register_courses->save();
 
                 $subject = subject::find(Request::get('id_subject')[$i]);
                 $subject->amount = $subject->amount - 1;
-                $subject->save();
+               $subject->save();
             }
 
             }

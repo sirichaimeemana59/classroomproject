@@ -100,10 +100,16 @@
 
                                     @foreach($register_courses as $key => $row)
                                             <?php
-                                                $time['start'][]=$row->join_subject->time_start;
-                                                $time['stop'][]=$row->join_subject->time_stop;
-                                                //$data_array['time'][]=$row->join_subject->time_start."-".$row->join_subject->time_stop;
-                                                //$data_array['subject'][]=$row->id_subject;
+
+                                        $time['start'][]='';
+                                        $time['stop'][]='';
+                                        $time['colspan'][]='';
+                                        $time['t'][]='';
+                                        $time['col'][]='';
+                                        $time['color'][]='';
+                                        $time['time'][]='';
+                                        $time['subject'][]='';
+
 
                                             $cut_time_start = explode(":",$row->join_subject->time_start);
                                             $cut_time_stop = explode(":",$row->join_subject->time_stop);
@@ -119,26 +125,61 @@
                                                   'stop'=>$row->join_subject->time_stop
                                                 );
 
-                                                $data_new[] =$data_array;
+
+                                        $sum_data = array();
+
+                                        if($row->join_subject->code_subject){
+                                            $count_ = count($row->join_subject->join_subjects_transection);
+                                            for ($i=0 ;$i<$count_;$i++){
+                                                $data_array_tran = array(
+                                                    'time'=>$row->join_subject->join_subjects_transection[$i]['time_start']."-".$row->join_subject->join_subjects_transection[$i]['time_stop'],
+                                                    'subject'=>  $row->join_subject->{'name_subject_'.Session::get('locale')},
+                                                    't'=>$row->join_subject->join_subjects_transection[$i]['day'],
+                                                    'colspan' => ($row->join_subject->join_subjects_transection[$i]['time_start']-$row->join_subject->join_subjects_transection[$i]['time_stop'])-1,
+                                                    'col'=>($row->join_subject->join_subjects_transection[$i]['time_start']-1),
+                                                    'color'=>'grey',
+                                                    'start'=>$row->join_subject->join_subjects_transection[$i]['time_start'],
+                                                    'stop'=>$row->join_subject->join_subjects_transection[$i]['time_stop']
+                                                );
+                                            }
+                                            $data_new_[]=$data_array_tran;
+
+                                            array_push($sum_data,$data_new_);
+                                        }
+
+                                              $data_array_subject['time_start']=$time['start'];
+                                              $data_array_subject['time_stop']=$time['stop'];
+                                              $data_array_subject['t']=$time['t'];
+                                              $data_array_subject['colspan']=$time['colspan'];
+                                              $data_array_subject['col']=$time['col'];
+                                              $data_array_subject['color']=$time['color'];
+                                              $data_array_subject['time']=$time['time'];
+                                              $data_array_subject['subject']=$time['subject'];
+
+                                        $data_new[] = $data_array;
+
+                                        array_push($sum_data,$data_new);
+
+
                                         ?>
                                         @endforeach
-                                    {{--{!! dd($data_new) !!}--}}
+                                    {!! print_r($sum_data) !!}
                                     @foreach ($day as $di => $day_)
                                         <tr>
                                             <td>{!! $day_ !!}</td>
                                             <?php $t=3;?>
 
-                                        @foreach($data_new as $datai => $data_)
+                                        @foreach($sum_data as $datai => $data_)
+                                            <?php $g = abs($b = $datai-1);?>
                                                 @foreach($timeArr as $i => $arr)
-                                                    @if($data_['t']==$di and $data_['start']==$i)
-                                                        @if($data_['start']>1)
-                                                            <td colspan="{!! abs($data_['col']) !!}"></td>
-                                                            <td colspan="{!! abs($data_['colspan']) !!}" style="background-color:{!! $data_['color'] !!}">{!! $data_['subject'] !!}</td>
+                                                    @if($data_[$g]['t']==$di and $data_[$g]['start']==$i)
+                                                        @if($data_[$g]['start']>1)
+                                                            <td colspan="{!! abs($data_[$g]['col']) !!}"></td>
+                                                            <td colspan="{!! abs($data_[$g]['colspan']) !!}" style="background-color:{!! $data_[$g]['color'] !!}">{!! $data_[$g]['subject'] !!}</td>
                                                             @else
-                                                            <td colspan="{!! abs($data_['colspan']) !!}" style="background-color:{!! $data_['color'] !!}">
-                                                            {!! $data_['subject'] !!}
+                                                            <td colspan="{!! abs($data_[$g]['colspan']) !!}" style="background-color:{!! $data_[$g]['color'] !!}">
+                                                            {!! $data_[$g]['subject'] !!}
                                                         @endif
-
                                                     @endif
                                                 @endforeach
                                          @endforeach
