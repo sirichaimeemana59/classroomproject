@@ -80,6 +80,15 @@ class StudentController extends Controller
             $find = $find->where('id_subject',Request::get('id_subject')[$i])
                     ->where('user_create',Auth::user()->id)->get();
 
+            //ค้นหารายวิชาที่เคยลงทะเบียน
+            //$find_subject = register_courses::where('user_create',Auth::user()->id)->get();
+            //ค้นหาวันเวลาของวิชาที่เรียน จากวิชาที่เคยเรียนแล้ว
+            //$find_time = subject::find($find_subject['id_subject'])->get();
+
+            //foreach ($find_subject as $row){
+               // dd($row->id_subject);
+            //}
+
             if(count($find) != 0){
                 $text = 1;
                 return redirect('student/list_subject/'.$text);

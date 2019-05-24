@@ -136,12 +136,14 @@
                 var name_teacher = $(this).data('name_teacher');
                 var id_teacher = $(this).data('id_teacher');
                 var code = $(this).data('code');
-
+                var start_ = $(this).data('start_');
+                var stop_ = $(this).data('stop_');
+                var day = $(this).data('day');
 
 
                 var data = ['<tr class="itemRow">',
                     '<td></td>',
-                    '<td><input type="hidden" name="id_subject[]" value="'+id+'"><input type="hidden" name="code_subject[]" value="'+code+'"><input type="hidden" name="id_teacher[]" value="'+id_teacher+'"><span>'+name+'</span></td>',
+                    '<td><input type="hidden" name="day[]" value="'+day+'"><input type="hidden" name="stop_[]" value="'+stop_+'"><input type="hidden" name="start_[]" value="'+start_+'"><input type="hidden" name="id_subject[]" value="'+id+'"><input type="hidden" name="code_subject[]" value="'+code+'"><input type="hidden" name="id_teacher[]" value="'+id_teacher+'"><span>'+name+'</span></td>',
                     '<td><span>'+start+'</span></td>',
                     '<td><span>'+stop+'</span></td>',
                     '<td><span>'+name_teacher+'</span></td>',

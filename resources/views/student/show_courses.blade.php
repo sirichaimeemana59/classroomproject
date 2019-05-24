@@ -122,7 +122,8 @@
                                                   'col'=>$row->join_subject->time_start-1,
                                                   'color'=>'grey',
                                                   'start'=>$row->join_subject->time_start,
-                                                  'stop'=>$row->join_subject->time_stop
+                                                  'stop'=>$row->join_subject->time_stop,
+                                                  'teacher'=>$row->join_subject->join_teacher['name_teacher']." ".$row->join_subject->join_teacher['lastname_teacher'],
                                                 );
 
 
@@ -139,7 +140,8 @@
                                                     'col'=>($row->join_subject->join_subjects_transection[$i]['time_start']-1),
                                                     'color'=>'grey',
                                                     'start'=>$row->join_subject->join_subjects_transection[$i]['time_start'],
-                                                    'stop'=>$row->join_subject->join_subjects_transection[$i]['time_stop']
+                                                    'stop'=>$row->join_subject->join_subjects_transection[$i]['time_stop'],
+                                                    'teacher'=>$row->join_subject->join_teacher['name_teacher']." ".$row->join_subject->join_teacher['lastname_teacher'],
                                                 );
                                             }
                                             $data_new_[]=$data_array_tran;
@@ -163,25 +165,29 @@
 
                                         ?>
                                         @endforeach
-                                    {!! print_r($sum_data) !!}
+                                    {{--{!! print_r($sum_data) !!}--}}
+                                    {{--{!! count($sum_data) !!}--}}
+                                    <?php $count_data =  count($sum_data) ?>
                                     @foreach ($day as $di => $day_)
                                         <tr>
                                             <td>{!! $day_ !!}</td>
                                             <?php $t=3;?>
 
                                         @foreach($sum_data as $datai => $data_)
-                                            <?php $g = abs($b = $datai-1);?>
-                                                @foreach($timeArr as $i => $arr)
-                                                    @if($data_[$g]['t']==$di and $data_[$g]['start']==$i)
-                                                        @if($data_[$g]['start']>1)
-                                                            <td colspan="{!! abs($data_[$g]['col']) !!}"></td>
-                                                            <td colspan="{!! abs($data_[$g]['colspan']) !!}" style="background-color:{!! $data_[$g]['color'] !!}">{!! $data_[$g]['subject'] !!}</td>
+
+                                                {{--@foreach($timeArr as $i => $arr)--}}
+                                            @for($i=0;$i<$count_data;$i++)
+                                                    @if($data_[$i]['t']==$di)
+                                                        @if($data_[$i]['start']>1)
+                                                            <td colspan="{!! abs($data_[$i]['col']) !!}"></td>
+                                                            <td colspan="{!! abs($data_[$i]['colspan']) !!}" style="background-color:{!! $data_[$i]['color'] !!};text-align: center;">{!! $data_[$i]['subject'] !!}<br>{!! $data_[$i]['teacher'] !!}</td>
                                                             @else
-                                                            <td colspan="{!! abs($data_[$g]['colspan']) !!}" style="background-color:{!! $data_[$g]['color'] !!}">
-                                                            {!! $data_[$g]['subject'] !!}
+                                                            <td colspan="{!! abs($data_[$i]['colspan']) !!}" style="background-color:{!! $data_[$i]['color'] !!};text-align: center;">
+                                                            {!! $data_[$i]['subject'] !!}<br>{!! $data_[$i]['teacher'] !!}
                                                         @endif
                                                     @endif
-                                                @endforeach
+                                            @endfor
+                                                {{--@endforeach--}}
                                          @endforeach
                                             </td>
                                         </tr>

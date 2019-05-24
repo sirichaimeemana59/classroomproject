@@ -1,7 +1,7 @@
 <?php
 Auth::routes();
 
-Route::get('/index','Home\HomeController@index');
+Route::get('/','Home\HomeController@index');
 
 //User Login
 Route::post('user/login','User\UserLoginController@index');
