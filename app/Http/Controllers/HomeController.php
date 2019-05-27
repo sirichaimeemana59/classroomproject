@@ -7,6 +7,7 @@ use Auth;
 use Redirect;
 use DB;
 use App\User;
+use session;
 class HomeController extends Controller
 {
     /**
@@ -27,6 +28,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Session::put('locale','en');
        // dd(Auth::user()->name);
         //return redirect('/admin/teacher');
         //return view('layout.layout');

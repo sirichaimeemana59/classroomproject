@@ -21,13 +21,69 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <?php
+                            $timeArr = array(
+                                0 => array( "start" => "08:30", "stop" => "09:20"),
+                                1 => array( "start" => "09:20", "stop" => "10:10"),
+                                2 => array( "start" => "10:15", "stop" => "11:05"),
+                                3 => array( "start" => "11:05", "stop" => "11:55"),
+                                4 => array( "start" => "11:55", "stop" => "12:45"),
+                                5 => array( "start" => "12:45", "stop" => "13:35"),
+                                6 => array( "start" => "13:35", "stop" => "14:30"),
+                                7 => array( "start" => "14:30", "stop" => "15:20"),
+                                8 => array( "start" => "15:20", "stop" => "16:10"),
+                                9 => array( "start" => "16:10", "stop" => "17:00"),
+                                10 => array( "start" => "17:00", "stop" => "17:50"),
+                                11 => array( "start" => "18:10", "stop" => "19:50")
+                            );
+
+                            $day = array(
+                                0 => trans('messages.day.Monday'),
+                                1 => trans('messages.day.Tuesday'),
+                                2 => trans('messages.day.Wednesday'),
+                                3 => trans('messages.day.Thursday'),
+                                4 => trans('messages.day.Friday'),
+                                5 => trans('messages.day.Saturday'),
+                                6 => trans('messages.day.Sunday')
+                            );
+
+                            $time_start = array(
+                                0 => "08:30",
+                                1 => "09:20",
+                                2 => "10:15",
+                                3 => "11:05",
+                                4 => "11:55",
+                                5 => "12:45",
+                                6 => "13:35",
+                                7 => "14:30",
+                                8 => "15:20",
+                                9 => "16:10",
+                                10 => "17:00",
+                                11 => "18:10"
+                            );
+
+                            $time_stop = array(
+                                0 => "09:20",
+                                1 => "10:10",
+                                2 => "11:05",
+                                3 => "11:55",
+                                4 => "12:45",
+                                5 => "13:35",
+                                6 => "14:30",
+                                7 => "15:20",
+                                8 => "16:10",
+                                9 => "17:00",
+                                10 => "17:50",
+                                11 => "19:50"
+                            );
+                            ?>
                             @if(!empty($register_courses_))
                                 @foreach($register_courses_ as $key => $row)
                                     <tr>
                                         <td>{!! $key+1 !!}</td>
                                         <td> {!! $row->join_subject->{'name_subject_'.Session::get('locale')} !!}</td>
-                                        <td>{!! $row->join_subject->time_start !!}</td>
-                                        <td>{!! $row->join_subject->time_stop !!}</td>
+                                        <td>{!! $time_start[$row->join_subject->time_start] !!}</td>
+                                        <td>{!! $time_stop[$row->join_subject->time_stop] !!}</td>
                                         <td>{!! $row->join_subject->join_teacher->name_teacher !!}   {!! $row->join_subject->join_teacher->lastname_teacher !!}</td>
                                         <td>@if($row->status == 1){!! trans('messages.approved') !!} @else {!! trans('messages.no_approved') !!} @endif</td>
                                         <td>
@@ -58,45 +114,14 @@
                     </div>
                     <div class="panel panel-default" id="panel-lead-list">
                         <br>
-                        <?php
-                        $timeArr = array(
-                            0 => array( "start" => "08:30", "stop" => "09:20"),
-                            1 => array( "start" => "09:20", "stop" => "10:10"),
-                            2 => array( "start" => "10:15", "stop" => "11:05"),
-                            3 => array( "start" => "11:05", "stop" => "11:55"),
-                            4 => array( "start" => "11:55", "stop" => "12:45"),
-                            5 => array( "start" => "12:45", "stop" => "13:35"),
-                            6 => array( "start" => "13:35", "stop" => "14:30"),
-                            7 => array( "start" => "14:30", "stop" => "15:20"),
-                            8 => array( "start" => "15:20", "stop" => "16:10"),
-                            9 => array( "start" => "16:10", "stop" => "17:00"),
-                            10 => array( "start" => "17:00", "stop" => "17:50"),
-                            11 => array( "start" => "18:10", "stop" => "19:50")
-                        );
 
-                        $day = array(
-                            0 => trans('messages.day.Monday'),
-                            1 => trans('messages.day.Tuesday'),
-                            2 => trans('messages.day.Wednesday'),
-                            3 => trans('messages.day.Thursday'),
-                            4 => trans('messages.day.Friday'),
-                            5 => trans('messages.day.Saturday'),
-                            6 => trans('messages.day.Sunday')
-                        );
-
-                        ?>
                         <div class="panel-body" id="landing-subject-list">
                             <div class="table-responsive">
                                 <table class="table">
                                     <tr>
                                         <th style="text-align: center;" colspan="21">{!! trans('messages.class_schedule') !!}</th>
                                     </tr>
-                                    <tr>
-                                        <th>{!! trans('messages.day_time') !!}</th>
-                                    @foreach( $timeArr as $data )
-                                        <th>{!! $data['start'] !!} - {!! $data['stop'] !!}</th>
-                                    @endforeach
-                                    </tr>
+
 
                                     @foreach($register_courses as $key => $row)
                                             <?php
@@ -118,8 +143,8 @@
                                                   'time'=>$row->join_subject->time_start."-".$row->join_subject->time_stop,
                                                   'subject'=>  $row->join_subject->{'name_subject_'.Session::get('locale')},
                                                   't'=>$row->join_subject->day,
-                                                  'colspan' => ($row->join_subject->time_start-$row->join_subject->time_stop)-1,
-                                                  'col'=>$row->join_subject->time_start-1,
+                                                  'colspan' => abs(($row->join_subject->time_start-$row->join_subject->time_stop)-1),
+                                                  'col'=>abs($row->join_subject->time_start-1),
                                                   'color'=>'grey',
                                                   'start'=>$row->join_subject->time_start,
                                                   'stop'=>$row->join_subject->time_stop,
@@ -136,8 +161,8 @@
                                                     'time'=>$row->join_subject->join_subjects_transection[$i]['time_start']."-".$row->join_subject->join_subjects_transection[$i]['time_stop'],
                                                     'subject'=>  $row->join_subject->{'name_subject_'.Session::get('locale')},
                                                     't'=>$row->join_subject->join_subjects_transection[$i]['day'],
-                                                    'colspan' => ($row->join_subject->join_subjects_transection[$i]['time_start']-$row->join_subject->join_subjects_transection[$i]['time_stop'])-1,
-                                                    'col'=>($row->join_subject->join_subjects_transection[$i]['time_start']-1),
+                                                    'colspan' => abs(($row->join_subject->join_subjects_transection[$i]['time_start']-$row->join_subject->join_subjects_transection[$i]['time_stop'])-1),
+                                                    'col'=>abs(($row->join_subject->join_subjects_transection[$i]['time_start']-1)),
                                                     'color'=>'grey',
                                                     'start'=>$row->join_subject->join_subjects_transection[$i]['time_start'],
                                                     'stop'=>$row->join_subject->join_subjects_transection[$i]['time_stop'],
@@ -165,30 +190,43 @@
 
                                         ?>
                                         @endforeach
+                                    <?php $count_data =  count($sum_data);
+                                            $v = count($day)-$count_data;
+
+                                    $count = 0;
+                                    foreach ($sum_data as $type) {
+                                        $count+= count($type);
+                                    }
+
+
+                                    ?>
                                     {{--{!! print_r($sum_data) !!}--}}
-                                    {{--{!! count($sum_data) !!}--}}
-                                    <?php $count_data =  count($sum_data) ?>
+                                    <tr>
+                                        <th>{!! trans('messages.day_time') !!}</th>
+                                        @foreach( $timeArr as $data )
+                                            <th>{!! $data['start'] !!} - {!! $data['stop'] !!}</th>
+                                        @endforeach
+                                    </tr>
+
                                     @foreach ($day as $di => $day_)
                                         <tr>
                                             <td>{!! $day_ !!}</td>
-                                            <?php $t=3;?>
-
-                                        @foreach($sum_data as $datai => $data_)
-
-                                                {{--@foreach($timeArr as $i => $arr)--}}
-                                            @for($i=0;$i<$count_data;$i++)
+                                            @for($i=0;$i<$count;$i++)
+                                                @foreach($sum_data as $datai => $data_)
                                                     @if($data_[$i]['t']==$di)
                                                         @if($data_[$i]['start']>1)
-                                                            <td colspan="{!! abs($data_[$i]['col']) !!}"></td>
-                                                            <td colspan="{!! abs($data_[$i]['colspan']) !!}" style="background-color:{!! $data_[$i]['color'] !!};text-align: center;">{!! $data_[$i]['subject'] !!}<br>{!! $data_[$i]['teacher'] !!}</td>
+                                                            <td colspan="{!! abs($data_[$i]['col']) !!}" style="background-color: yellow;">2</td>
+                                                            <td colspan="{!! abs($data_[$i]['colspan']) !!}" style="background-color:{!! $data_[$i]['color'] !!};text-align: center;">{!! $data_[$i]['subject'] !!}<br>{!! $data_[$i]['teacher'] !!}
+                                                                <br>{!! $data_[$i]['time'] !!}</td>
                                                             @else
+                                                            <td colspan="{!! abs($data_[$i]['col']) !!}" style="background-color: yellow;">3</td>
                                                             <td colspan="{!! abs($data_[$i]['colspan']) !!}" style="background-color:{!! $data_[$i]['color'] !!};text-align: center;">
                                                             {!! $data_[$i]['subject'] !!}<br>{!! $data_[$i]['teacher'] !!}
+                                                                <br>{!! $data_[$i]['time'] !!}
                                                         @endif
                                                     @endif
+                                                @endforeach
                                             @endfor
-                                                {{--@endforeach--}}
-                                         @endforeach
                                             </td>
                                         </tr>
                                     @endforeach

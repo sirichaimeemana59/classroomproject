@@ -56,8 +56,8 @@ class TeacherController extends Controller
         $subject->code_subject = $randstring;
         $subject->save();
 
-
-        foreach (Request::get('data') as $t) {
+        if(!empty(Request::get('data'))){
+            foreach (Request::get('data') as $t) {
             $subjects_transection = new subjects_transection;
             $subjects_transection->day = $t['day_class'];
             $subjects_transection->time_start = $t['time_start'];
@@ -67,6 +67,8 @@ class TeacherController extends Controller
             $subjects_transection->save();
             //dump($subjects_transection);
         }
+        }
+
 
         return redirect('/teacher/list_subject');
     }

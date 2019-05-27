@@ -81,17 +81,24 @@ class StudentController extends Controller
                     ->where('user_create',Auth::user()->id)->get();
 
             //ค้นหารายวิชาที่เคยลงทะเบียน
-            //$find_subject = register_courses::where('user_create',Auth::user()->id)->get();
+            $find_subject = register_courses::where('user_create',Auth::user()->id)->get();
             //ค้นหาวันเวลาของวิชาที่เรียน จากวิชาที่เคยเรียนแล้ว
             //$find_time = subject::find($find_subject['id_subject'])->get();
 
-            //foreach ($find_subject as $row){
-               // dd($row->id_subject);
-            //}
 
             if(count($find) != 0){
                 $text = 1;
                 return redirect('student/list_subject/'.$text);
+            }elseif(count($find) == 0){
+                foreach ($find_subject as $key => $row){
+                    $find_time = subject::find($row['id_subject'])->get();
+                    $find_time_regis_ = subject::find(Request::get('id_subject')[$i])->get();
+
+                    if($find_time_regis_[$key]['time_start'] == $find_time_regis_[$key]['time_start'] || $find_time_regis_[$key]['time_stop'] == $find_time_regis_[$key]['time_stop'] || $find_time_regis_[$key]['day'] == $find_time_regis_[$key]['day']) {
+                        $text = 1;
+                        return redirect('student/list_subject/'.$text);
+                    }
+                }
             }else{
                 $register_courses = new register_courses;
                 $register_courses->id_subject = Request::get('id_subject')[$i];
@@ -102,7 +109,7 @@ class StudentController extends Controller
 
                 $subject = subject::find(Request::get('id_subject')[$i]);
                 $subject->amount = $subject->amount - 1;
-               $subject->save();
+                $subject->save();
             }
 
             }
