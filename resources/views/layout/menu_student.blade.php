@@ -19,9 +19,9 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
-                <i class="mdi mdi-chart-pie menu-icon"></i>
-                <span class="menu-title">Charts</span>
+            <a class="nav-link" href="{!! url('/student/test/examination') !!}">
+                <i class="mdi mdi-grease-pencil menu-icon"></i>
+                <span class="menu-title">{!! trans('messages.examination.title') !!}</span>
             </a>
         </li>
         <li class="nav-item">

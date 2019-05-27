@@ -276,16 +276,16 @@
                 $(this).closest('form').find("input").val("");
                 $(this).closest('form').find("select option:selected").removeAttr('selected');
                 //propertyPageSale (1);
-                window.location.href ='/teacher/list_subject';
+                window.location.href ='/teacher/examination';
             });
 
             $('.search-subject').on('click',function(){
                 var data  = $('#search-form').serialize();
                 //alert('aa');
-                //console.log(data);
+                console.log(data);
                 $('#landing-subject-list').css('opacity','0.6');
                 $.ajax({
-                    url : '/teacher/list_subject',
+                    url : '/teacher/examination',
                     method : 'post',
                     dataType : 'html',
                     data : data,

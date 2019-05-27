@@ -19,8 +19,8 @@ class ExaminationController extends Controller
 
         if($request->method('post')) {
             if ($request->get('name')) {
-                $examination = $examination->where('choice_th', 'like', "%" . $request->get('name') . "%")
-                    ->orWhere('choice_en', 'like', "%" . $request->get('name') . "%");
+                $examination = $examination->where('proposition_th', 'like', "%" . $request->get('name') . "%")
+                    ->orWhere('proposition_en', 'like', "%" . $request->get('name') . "%");
             }
         }
 
@@ -201,7 +201,7 @@ class ExaminationController extends Controller
         $examination_transection = examination_transection::where('code',$examination->code);
         $examination->delete();
         $examination_transection->delete();
-        
+
 
         return redirect('/teacher/examination');
     }
