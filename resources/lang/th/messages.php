@@ -64,4 +64,15 @@ return [
         'Friday'=>'วันศุกร์',
         'Saturday'=>'วันเสาร์'
     ],
+    'examination' => [
+        'title' => 'ออกข้อสอบ',
+        'list_exam' => 'รายการข้อสอบ',
+        'proposition' => 'โจทย์',
+        'proposition_th' => 'โจทย์ [th]',
+        'proposition_en' => 'โจทย์ [en]',
+        'choice' => 'ตัวเลือก',
+        'choice_th' => 'ตัวเลือก [th]',
+        'choice_en' => 'ตัวเลือก [en]',
+        'answer' => 'คำตอบ',
+    ]
 ];

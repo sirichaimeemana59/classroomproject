@@ -49,3 +49,12 @@ Route::any('/student/list_subject/{text?}','Student\StudentController@show_subje
 Route::post('/student/register_courses','Student\StudentController@register_courses');
 Route::get('/student/class_schedule','Student\StudentController@class_schedule');
 Route::post('/student/delete_courses','Student\StudentController@delete_courses');
+
+//Examination
+Route::any('/teacher/examination','Teacher\ExaminationController@index');
+Route::post('/teacher/insert_examination','Teacher\ExaminationController@create');
+Route::post('/teacher/view_exam','Teacher\ExaminationController@show');
+Route::get('/teacher/edit_exam/{id?}','Teacher\ExaminationController@edit');
+Route::post('/teacher/edit_exam/form','Teacher\ExaminationController@update');
+Route::post('/teacher/delete/choice','Teacher\ExaminationController@destroy');
+Route::post('/teacher/delete-examination','Teacher\ExaminationController@destroy_more');

@@ -65,4 +65,15 @@ return [
         'Friday'=>'Friday',
         'Saturday'=>'Saturday'
     ],
+    'examination' => [
+        'title' => 'Examination',
+        'list_exam' => 'Examination',
+        'proposition' => 'Proposition',
+        'proposition_th' => 'Proposition [th]',
+        'proposition_en' => 'Proposition [en]',
+        'choice' => 'Choices',
+        'choice_th' => 'Choices [th]',
+        'choice_en' => 'Choices [en]',
+        'answer' => 'Answer',
+    ]
 ];
