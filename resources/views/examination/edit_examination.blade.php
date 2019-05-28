@@ -22,6 +22,18 @@
                                 <input type="hidden" name="id_subject" value="{!! $examination->id_subject !!}">
                                 <input type="hidden" name="code_" value="{!! $examination->code !!}">
                                 <div class="form-group row">
+                                    <lable class="col-sm-2 control-label">{!! trans('messages.examination.title_base_th') !!}</lable>
+                                    <div class="col-sm-4">
+                                        {!! Form::text('title_base_th',null,array('class'=>'form-control','placeholder'=>trans('messages.examination.title_base_th'),'required')) !!}
+                                    </div>
+
+                                    <lable class="col-sm-2 control-label">{!! trans('messages.examination.title_base_en') !!}</lable>
+                                    <div class="col-sm-4">
+                                        {!! Form::text('title_base_en',null,array('class'=>'form-control','placeholder'=>trans('messages.examination.title_base_en'),'required')) !!}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
                                     <lable class="col-sm-2 control-label">{!! trans('messages.examination.proposition_th') !!}</lable>
                                     <div class="col-sm-10">
                                         <textarea name="proposition_th" class="form-editor form-control">{!! $examination['proposition_th'] !!}</textarea>

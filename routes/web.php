@@ -59,6 +59,7 @@ Route::post('/teacher/edit_exam/form','Teacher\ExaminationController@update');
 Route::post('/teacher/delete/choice','Teacher\ExaminationController@destroy');
 Route::post('/teacher/delete-examination','Teacher\ExaminationController@destroy_more');
 Route::get('/teacher/add_eam_form/{id?}','Teacher\ExaminationController@add_eam_form');
+Route::get('/teacher/add_eam_form_new/{id?}','Teacher\ExaminationController@add_eam_form_new');
 
 //Student examination
 Route::any('/teacher/examination','Teacher\ExaminationController@index');

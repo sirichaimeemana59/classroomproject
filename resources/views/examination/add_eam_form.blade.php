@@ -45,6 +45,18 @@
                                         {!! Form::model(null,array('url' => array('teacher/insert_examination'),'class'=>'form-horizontal','id'=>'form_add','method'=>'post','enctype'=>'multipart/form-data')) !!}
                                         <input type="hidden" name="id_subject" value="{!! $id !!}">
                                         <div class="form-group row">
+                                            <lable class="col-sm-2 control-label">{!! trans('messages.examination.title_base_th') !!}</lable>
+                                            <div class="col-sm-4">
+                                                {!! Form::text('title_base_th',null,array('class'=>'form-control','placeholder'=>trans('messages.examination.title_base_th'),'required')) !!}
+                                            </div>
+
+                                            <lable class="col-sm-2 control-label">{!! trans('messages.examination.title_base_en') !!}</lable>
+                                            <div class="col-sm-4">
+                                                {!! Form::text('title_base_en',null,array('class'=>'form-control','placeholder'=>trans('messages.examination.title_base_en'),'required')) !!}
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
                                             <lable class="col-sm-2 control-label">{!! trans('messages.examination.proposition_th') !!}</lable>
                                             <div class="col-sm-10">
                                                 <textarea name="proposition_th" class="form-editor form-control"></textarea>

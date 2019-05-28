@@ -103,6 +103,8 @@ class ExaminationController extends Controller
         $examination->user_create = Auth::user()->id;
         $examination->id_subject = $request->input('id_subject');
         $examination->photo = null;
+        $examination->title_base_th = $request->input('title_base_th');
+        $examination->title_base_en = $request->input('title_base_en');
         $examination->save();
         //dump($examination);
 
@@ -179,6 +181,8 @@ class ExaminationController extends Controller
             $examination->user_create = Auth::user()->id;
             $examination->photo = null;
             $examination->id_subject = $request->input('id_subject');
+            $examination->title_base_th = $request->input('title_base_th');
+            $examination->title_base_en = $request->input('title_base_en');
             $examination->save();
 
             if (!empty($request->get('data'))) {
@@ -225,6 +229,8 @@ class ExaminationController extends Controller
             $examination->user_create = Auth::user()->id;
             $examination->photo = null;
             $examination->id_subject = $request->input('id_subject');
+            $examination->title_base_th = $request->input('title_base_th');
+            $examination->title_base_en = $request->input('title_base_en');
             $examination->save();
 
            // dd($request->get('data'));
@@ -279,12 +285,14 @@ class ExaminationController extends Controller
 
     public function add_eam_form($id = null){
         $subject = subject::where('id_subject',$id)->first();
-        $examination = examination::where('id_subject',$id)->first();
+        $examination_ = examination::where('id_subject',$id)->first();
+        $examination = examination::where('id_subject',$id)->get();
 
+        if($examination_){
+            $examination_transection = examination_transection::where('code',$examination_->code)->get();
+//            return view('examination.edit_examination')->with(compact('subject','id','examination','examination_transection'));
 
-        if($examination){
-            $examination_transection = examination_transection::where('code',$examination->code)->get();
-            return view('examination.edit_examination')->with(compact('subject','id','examination','examination_transection'));
+            return view('examination.list_choice_examination')->with(compact('subject','id','examination','examination_transection','examination_'));
         }else{
             return view('examination.add_eam_form')->with(compact('subject','id','examination'));
         }
@@ -314,5 +322,13 @@ class ExaminationController extends Controller
         return redirect('/teacher/examination');
     }
 
+    public function add_eam_form_new($id = null){
+        $subject = subject::where('id_subject',$id)->first();
+        $examination_ = examination::where('id_subject',$id)->first();
+        $examination = examination::where('id_subject',$id)->get();
+
+            return view('examination.add_eam_form')->with(compact('subject','id','examination'));
+
+    }
 
 }

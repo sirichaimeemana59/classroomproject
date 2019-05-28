@@ -75,5 +75,9 @@ return [
         'choice_en' => 'ตัวเลือก [en]',
         'answer' => 'คำตอบ',
         'take_the_exam' => 'ออกข้อสอบ',
+        'title_base_th' => 'หัวข้อ [TH]',
+        'title_base_en' => 'หัวข้อ [EN]',
+        'add_answer' => 'เพิ่มตัวเลือก',
+        'delete' => 'คุณแน่ใจว่าต้องการลบคำตอบนี้ ?',
     ]
 ];

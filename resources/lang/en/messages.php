@@ -76,5 +76,9 @@ return [
         'choice_en' => 'Choices [en]',
         'answer' => 'Answer',
         'take_the_exam' => 'Take the exam',
+        'title_base_th' => 'Title [TH]',
+        'title_base_en' => 'Title [EN]',
+        'add_answer' => 'Add answer',
+        'delete' => 'Are you sure you want to delete this answer?',
     ]
 ];
