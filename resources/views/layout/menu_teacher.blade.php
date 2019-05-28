@@ -25,9 +25,9 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-                <i class="mdi mdi-grid-large menu-icon"></i>
-                <span class="menu-title">Tables</span>
+            <a class="nav-link" href="{!! url('/teacher/grading_the_exam') !!}">
+                <i class="mdi mdi-comment-remove-outline menu-icon"></i>
+                <span class="menu-title">{!! trans('messages.examination.grading_the_exam') !!}</span>
             </a>
         </li>
         <li class="nav-item">

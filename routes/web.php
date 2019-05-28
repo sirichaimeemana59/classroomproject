@@ -65,3 +65,8 @@ Route::get('/teacher/add_eam_form_new/{id?}','Teacher\ExaminationController@add_
 Route::any('/student/test/examination/{text?}','Student\StudentExaminationController@index');
 Route::get('/student/student_start_test/{id?}','Student\StudentExaminationController@student_start_test');
 Route::post('/student/send/ans','Student\StudentExaminationController@send_ans');
+
+//teacher grading_the_exam
+Route::any('/teacher/grading_the_exam','Teacher\GradingexamController@index');
+Route::any('/teacher/grading_the_exam/list_student/{id?}','Teacher\GradingexamController@create');
+Route::get('/teacher/grading_the_exam/check/{id_subject?}/{id_student?}','Teacher\GradingexamController@store');

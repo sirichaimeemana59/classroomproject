@@ -45,4 +45,9 @@ class register_courses extends Model
     {
         return $this->hasMany('App\examination_transection','code','code');
     }
+
+    public function join_answer_student ()
+    {
+        return $this->hasMany('App\answer_student','user_create','user_create');
+    }
 }

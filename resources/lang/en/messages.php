@@ -82,5 +82,7 @@ return [
         'delete' => 'Are you sure you want to delete this answer?',
         'send' => 'Send an answer',
         'error_exm' => 'You have done this exam !!!',
+        'grading_the_exam' => 'Grading the exam',
+        'answer_sheet' => 'answer sheet',
     ]
 ];

@@ -20,4 +20,9 @@ class subject extends Model
     {
         return $this->hasMany('App\subjects_transection','id_subject','code_subject');
     }
+
+    public function join_examination ()
+    {
+        return $this->hasOne('App\examination','id_subject','id_subject');
+    }
 }
