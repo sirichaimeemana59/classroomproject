@@ -47,7 +47,11 @@
                     <td>{!! $key+1 !!}</td>
                     <td> {!! $row->join_subject->{'name_subject_'.Session::get('locale')} !!}</td>
                     <td>
-                        <a href="{!! url('/student/student_start_test/'.$row->join_subject->id_subject) !!}"><button class="btn btn-warning mt-2 mt-xl-0 text-right" @if(empty($row->join_examination) || !empty($answer_student)) disabled @endif><i class="mdi mdi-eye"></i></button></a>
+                        @if(empty($row->join_examination))
+                            <button class="btn btn-warning mt-2 mt-xl-0 text-right" @if(empty($row->join_examination)) disabled @endif><i class="mdi mdi-eye"></i></button>
+                        @else
+                            <a href="{!! url('/student/student_start_test/'.$row->join_subject->id_subject) !!}" ><button class="btn btn-warning mt-2 mt-xl-0 text-right"><i class="mdi mdi-eye"></i></button></a>
+                        @endif
                     </td>
                 </tr>
             @endforeach
