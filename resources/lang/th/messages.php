@@ -74,5 +74,6 @@ return [
         'choice_th' => 'ตัวเลือก [th]',
         'choice_en' => 'ตัวเลือก [en]',
         'answer' => 'คำตอบ',
+        'take_the_exam' => 'ออกข้อสอบ',
     ]
 ];

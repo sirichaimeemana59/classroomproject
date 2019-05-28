@@ -5,7 +5,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="panel-heading">
-                        <h3 class="panel-title">{!! trans('messages.examination.choice') !!}</h3>
+                        <h3 class="panel-title">{!! trans('messages.examination.list_exam') !!}</h3>
                     </div>
                     <div class="panel panel-default" id="panel-lead-list">
                         <div class="panel-body" id="landing-subject-list">
@@ -19,25 +19,32 @@
                             @endif
                             {!! Form::model($examination,array('url' => array('teacher/edit_exam/form'),'class'=>'form-horizontal','id'=>'form_add','method'=>'post','enctype'=>'multipart/form-data')) !!}
                                 <input type="hidden" name="id_" value="{!! $examination->id !!}">
+                                <input type="hidden" name="id_subject" value="{!! $examination->id_subject !!}">
                                 <input type="hidden" name="code_" value="{!! $examination->code !!}">
                                 <div class="form-group row">
                                     <lable class="col-sm-2 control-label">{!! trans('messages.examination.proposition_th') !!}</lable>
-                                    <div class="col-sm-4">
-                                        {!! Form::text('proposition_th',null,array('class'=>'form-control','placeholder'=>trans('messages.examination.proposition_th'),'required')) !!}
+                                    <div class="col-sm-10">
+                                        <textarea name="proposition_th" class="form-editor form-control">{!! $examination['proposition_th'] !!}</textarea>
+                                        {{--{!! Form::text('proposition_th',null,array('class'=>'form-control form-editor','placeholder'=>trans('messages.examination.proposition_th'),'required')) !!}--}}
                                     </div>
 
-                                    <lable class="col-sm-2 control-label">{!! trans('messages.examination.proposition_en') !!}</lable>
-                                    <div class="col-sm-4">
-                                        {!! Form::text('proposition_en',null,array('class'=>'form-control','placeholder'=>trans('messages.examination.proposition_en'),'required')) !!}
-                                    </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <lable class="col-sm-2 control-label">{!! trans('messages.teacher.photo') !!}</lable>
-                                    <div class="col-sm-4">
-                                        {!! Form::file('photo',null,array('class'=>'form-control')) !!}
+                                    <lable class="col-sm-2 control-label">{!! trans('messages.examination.proposition_en') !!}</lable>
+                                    <div class="col-sm-10">
+                                        <textarea name="proposition_en" class="form-editor form-control">{!! $examination['proposition_en'] !!}</textarea>
+                                        {{--{!! Form::text('proposition_en',null,array('class'=>'form-control form-editor','placeholder'=>trans('messages.examination.proposition_en'),'required')) !!}--}}
                                     </div>
                                 </div>
+
+
+                                {{--<div class="form-group row">--}}
+                                    {{--<lable class="col-sm-2 control-label">{!! trans('messages.teacher.photo') !!}</lable>--}}
+                                    {{--<div class="col-sm-4">--}}
+                                        {{--{!! Form::file('photo',null,array('class'=>'form-control')) !!}--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
                                 @if(!empty($examination_transection))
                             <div class="form-group row">
@@ -88,6 +95,18 @@
 
 @endsection
 @section('script')
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
+    <!-- include libraries(jQuery, bootstrap) -->
+    {{--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">--}}
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript">
         $(function() {
@@ -149,6 +168,12 @@
                 //alert('aaa');
                 $(this).closest('tr.itemRow').remove();
                 //return false;
+            });
+
+            $(document).ready(function() {
+                $('.form-editor').summernote({
+                    height:300,
+                });
             });
 
         });

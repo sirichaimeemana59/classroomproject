@@ -8,7 +8,7 @@ class examination extends Model
 {
     protected $primaryKey = 'id';
     protected $table = 'examination';
-    protected $fillable = ['code,proposition_th,proposition_en,user_create,photo'];
+    protected $fillable = ['code,proposition_th,proposition_en,user_create,photo,id_subject'];
     public $timestamps = true;
 
     public function join_teacher ()

@@ -75,5 +75,6 @@ return [
         'choice_th' => 'Choices [th]',
         'choice_en' => 'Choices [en]',
         'answer' => 'Answer',
+        'take_the_exam' => 'Take the exam',
     ]
 ];
