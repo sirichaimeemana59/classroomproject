@@ -19,7 +19,7 @@ class examination extends Model
 
     public function join_examination_transection ()
     {
-        return $this->hasOne('App\examination_transection','code','code');
+        return $this->hasMany('App\examination_transection','code','code');
     }
 
     public function join_subject ()

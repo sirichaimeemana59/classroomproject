@@ -35,4 +35,14 @@ class register_courses extends Model
     {
         return $this->hasOne('App\subject','code_subject','code_subject');
     }
+
+    public function join_examination ()
+    {
+        return $this->hasOne('App\examination','id_subject','id_subject');
+    }
+
+    public function join_examination_trans ()
+    {
+        return $this->hasMany('App\examination_transection','code','code');
+    }
 }

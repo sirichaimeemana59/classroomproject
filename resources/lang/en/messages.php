@@ -80,5 +80,7 @@ return [
         'title_base_en' => 'Title [EN]',
         'add_answer' => 'Add answer',
         'delete' => 'Are you sure you want to delete this answer?',
+        'send' => 'Send an answer',
+        'error_exm' => 'You have done this exam !!!',
     ]
 ];
