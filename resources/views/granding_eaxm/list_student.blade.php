@@ -1,5 +1,10 @@
 @extends('layout.layout')
 @section('content')
+    @if($text == 2)
+        <div class="alert alert-success">
+            <strong>Success!</strong> {!! trans('messages.examination.examination_completed') !!}
+        </div>
+    @endif
     {{-- //search --}}
     <div class="row">
         <div class="col-md-12 stretch-card">

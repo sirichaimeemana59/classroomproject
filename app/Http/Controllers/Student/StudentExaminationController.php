@@ -45,7 +45,9 @@ class StudentExaminationController extends Controller
         $examination_ = examination::where('id_subject',$id)->first();
         $examination_transection = examination_transection::where('code',$examination_->code)->get();
         $answer_student = answer_student::where('code',$examination_->code)->where('user_create',Auth::user()->id)->get();
-        if($answer_student){
+
+//        dd(count($answer_student));
+        if(count($answer_student) != 0){
             return redirect('/student/test/examination/'.$text=2);
         }
 

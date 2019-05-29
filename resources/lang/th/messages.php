@@ -83,5 +83,8 @@ return [
         'error_exm' => 'คุณทำข้อสอบนี้ไปแล้ว !!!',
         'grading_the_exam' => 'ตรวจข้อสอบ',
         'answer_sheet' => 'กระดาษคำตอบ',
+        'score' => 'คะแนน',
+        'score_summary' => 'สรุปคะแนน',
+        'examination_completed' => 'ทำการตรวจข้อสอบเรียบร้อยแล้ว',
     ]
 ];

@@ -84,5 +84,8 @@ return [
         'error_exm' => 'You have done this exam !!!',
         'grading_the_exam' => 'Grading the exam',
         'answer_sheet' => 'answer sheet',
+        'score' => 'Score',
+        'score_summary' => 'Score summary',
+        'examination_completed' => 'Examination completed',
     ]
 ];
