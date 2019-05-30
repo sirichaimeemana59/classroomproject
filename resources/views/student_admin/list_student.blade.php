@@ -110,6 +110,23 @@
                                     <div class="col-sm-4">
                                         {!! Form::file('photo',null,array('class'=>'form-control')) !!}
                                     </div>
+
+                                    <lable class="col-sm-2 control-label">{!! trans('messages.teacher.email') !!}</lable>
+                                    <div class="col-sm-4">
+                                        {!! Form::text('email',null,array('class'=>'form-control','placeholder'=>trans('messages.teacher.email'),'required')) !!}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <lable class="col-sm-2 control-label">{!! trans('messages.teacher.pass') !!}</lable>
+                                    <div class="col-sm-4">
+                                        {!! Form::password('password',null,array('class'=>'form-control','placeholder'=>trans('messages.teacher.pass'),'required')) !!}
+                                    </div>
+
+                                    <lable class="col-sm-2 control-label">{!! trans('messages.teacher.con_pass') !!}</lable>
+                                    <div class="col-sm-4">
+                                        {!! Form::password('password_',null,array('class'=>'form-control','placeholder'=>trans('messages.teacher.con_pass'),'required')) !!}
+                                    </div>
                                 </div>
 
                                 <div class="form-group row float-center" style="text-align: center; ">

@@ -39,4 +39,11 @@
     </div>
 
 </div>
+
+<div class="form-group row">
+    <lable class="col-sm-2 control-label">{!! trans('messages.teacher.email') !!}</lable>
+    <div class="col-sm-4">
+        {!! Form::text('email',null,array('class'=>'form-control','placeholder'=>trans('messages.teacher.email'),'required','readonly')) !!}
+    </div>
+</div>
 {!! Form::close() !!}

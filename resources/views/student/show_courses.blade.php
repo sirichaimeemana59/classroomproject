@@ -197,8 +197,9 @@
                                     foreach ($sum_data as $type) {
                                         $count+= count($type);
                                     }
-
-
+//                                    if($count <= 2){
+                                        $count = $count-3;
+//                                    }
                                     ?>
                                     {{--{!! print_r($sum_data) !!}--}}
                                     <tr>

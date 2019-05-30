@@ -40,7 +40,10 @@ return [
         'address' => 'Address',
         'photo' => 'Photo',
         'birthdate' => 'Birthdate',
-        'tell' => 'tell'
+        'tell' => 'tell',
+        'email' => 'Email',
+        'pass' => 'Password',
+        'con_pass' => 'Confirm Password',
     ],
     'student' =>[
         'list_student' => 'Student',
@@ -87,5 +90,8 @@ return [
         'score' => 'Score',
         'score_summary' => 'Score summary',
         'examination_completed' => 'Examination completed',
+    ],
+    'group_student' => [
+        'add' => 'Grouping',
     ]
 ];

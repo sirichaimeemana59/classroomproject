@@ -71,3 +71,7 @@ Route::any('/teacher/grading_the_exam','Teacher\GradingexamController@index');
 Route::any('/teacher/grading_the_exam/list_student/{id?}/{text?}','Teacher\GradingexamController@create');
 Route::get('/teacher/grading_the_exam/check/{id_subject?}/{id_student?}','Teacher\GradingexamController@store');
 Route::post('/teacher/score/score_summary','Teacher\GradingexamController@score_summary');
+
+//teacher group_student
+Route::any('/teacher/group_student','Teacher\StudentGroupController@index');
+Route::any('/teacher/group_student_add/{id?}','Teacher\StudentGroupController@create');

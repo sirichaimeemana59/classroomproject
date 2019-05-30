@@ -39,7 +39,10 @@ return [
         'tell' => 'เบอร์โทร',
         'address' => 'ที่อยู่',
         'photo' => 'รูป',
-        'birthdate' => 'วันเกิด'
+        'birthdate' => 'วันเกิด',
+        'email' => 'อีเมล',
+        'pass' => 'รหัสผ่าน',
+        'con_pass' => 'ยืนยันรหัสผ่าน',
     ],
     'student' =>[
         'list_student' => 'นักเรียน',
@@ -86,5 +89,8 @@ return [
         'score' => 'คะแนน',
         'score_summary' => 'สรุปคะแนน',
         'examination_completed' => 'ทำการตรวจข้อสอบเรียบร้อยแล้ว',
+    ],
+    'group_student' => [
+        'add' => 'จัดกลุ่ม',
     ]
 ];

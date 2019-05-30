@@ -31,6 +31,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{!! url('/teacher/group_student') !!}">
+                <i class="mdi mdi-account-multiple menu-icon"></i>
+                <span class="menu-title">{!! trans('messages.group_student.add') !!}</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="pages/icons/mdi.html">
                 <i class="mdi mdi-emoticon menu-icon"></i>
                 <span class="menu-title">Icons</span>
