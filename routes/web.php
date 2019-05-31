@@ -75,3 +75,4 @@ Route::post('/teacher/score/score_summary','Teacher\GradingexamController@score_
 //teacher group_student
 Route::any('/teacher/group_student','Teacher\StudentGroupController@index');
 Route::any('/teacher/group_student_add/{id?}','Teacher\StudentGroupController@create');
+Route::post('/teacher/group_student/add','Teacher\StudentGroupController@store');

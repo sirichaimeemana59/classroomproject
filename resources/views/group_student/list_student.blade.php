@@ -56,6 +56,55 @@
         </div>
     </div>
 
+
+    {{--Group--}}
+    <div class="row">
+        <div class="col-md-12 stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{!! trans('messages.group_student.add') !!}</h3>
+                    </div>
+                    <div class="panel panel-default" id="panel-lead-list">
+                        {{--<div class="row">--}}
+                        {{--<div class="col-sm-12 text-right">--}}
+                        {{--<button class="btn btn-primary mt-2 mt-xl-0 text-right add-subject"><i class="mdi mdi-account-multiple-plus"></i>  {!! trans('messages.subjects.list_subjects') !!}</button>--}}
+                        {{--</div>--}}
+                        {{--</div>--}}
+                        <br>
+                        <div class="panel-body" id="">
+                            {!! Form::model(null,array('url' => array('/teacher/group_student/add'),'class'=>'form-horizontal','id'=>'form_add','method'=>'post','enctype'=>'multipart/form-data')) !!}
+                            <table class="table table-responsive itemTables" style="width: 100%">
+                                <tr>
+                                    <th ></th>
+                                    <th>{!! trans('messages.photo') !!}</th>
+                                    <th>{!! trans('messages.name-last') !!}</th>
+                                    <th>{!! trans('messages.action') !!}</th>
+                                </tr>
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <th width="65%"></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td style="text-align: right;"><button class="btn btn-primary mt-2 mt-xl-0 text-right save-regis" type="submit"><i class="mdi mdi-package-down"></i></button></td>
+                                </tr>
+                            </table>
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--End Groups--}}
+
 @endsection
 
 @section('script')
@@ -99,6 +148,36 @@
                         console.log('Error Search Data Student');
                     }
                 });
+            });
+
+            $('.add-group').on('click',function(){
+                var id = $(this).data('id');
+                var id_subject = $(this).data('id-subject');
+                var name = $(this).data('name');
+                var photo = $(this).data('photo');
+                var time = $.now();
+
+                var data = ['<tr class="itemRow">',
+                    '<td></td>',
+                    '<td><img src="'+photo+'" alt="" width="25%"></td>',
+                    '<td><input type="hidden" name="data['+time+'][id_subject]" value="'+id_subject+'"><input type="hidden" name="data['+time+'][id_student]" value="'+id+'"><span>'+name+'</span></td>',
+                    '<td><a class="btn btn-danger delete-subject"><i class="mdi mdi-delete-sweep"></i></a></td>',
+                ];
+
+                data.push(
+                    '<td><div class="text-right">' +
+                    '<span class="colTotal"></span> </div><input class="tLineTotal" name="" type="hidden"></td>','</tr>');
+                data = data.join('');
+
+                $('.itemTables').append(data);
+                $('.save-regis').show();
+
+            });
+
+            $('.itemTables').on("click", '.delete-subject', function() {
+                //alert('aaa');
+                $(this).closest('tr.itemRow').remove();
+                //return false;
             });
         });
     </script>

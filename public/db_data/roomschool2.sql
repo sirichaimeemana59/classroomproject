@@ -52,21 +52,6 @@ CREATE TABLE "public"."examination_transection" (
 ) WITH (oids = false);
 
 
-DROP TABLE IF EXISTS "group_student";
-DROP SEQUENCE group_student_id_seq;
-CREATE SEQUENCE group_student_id_seq INCREMENT  MINVALUE  MAXVALUE  START 1 CACHE ;
-
-CREATE TABLE "public"."group_student" (
-    "id" bigint DEFAULT nextval('group_student_id_seq') NOT NULL,
-    "id_subject" integer NOT NULL,
-    "id_student" integer NOT NULL,
-    "created_at" timestamp(0),
-    "updated_at" timestamp(0),
-    "code" text,
-    CONSTRAINT "group_student_pkey" PRIMARY KEY ("id")
-) WITH (oids = false);
-
-
 DROP TABLE IF EXISTS "migrations";
 DROP SEQUENCE migrations_id_seq;
 CREATE SEQUENCE migrations_id_seq INCREMENT  MINVALUE  MAXVALUE  START 1 CACHE ;
@@ -138,9 +123,7 @@ CREATE TABLE "public"."student" (
     "address" text NOT NULL,
     "photo" text NOT NULL,
     "created_at" timestamp NOT NULL,
-    "updated_at" timestamp NOT NULL,
-    "email" text,
-    "code" text
+    "updated_at" timestamp NOT NULL
 ) WITH (oids = false);
 
 
@@ -237,7 +220,6 @@ CREATE TABLE "public"."users" (
     "created_at" timestamp(0),
     "updated_at" timestamp(0),
     "role" smallint DEFAULT 0,
-    "code" text,
     CONSTRAINT "users_email_unique" UNIQUE ("email"),
     CONSTRAINT "users_pkey" PRIMARY KEY ("id")
 ) WITH (oids = false);
@@ -245,4 +227,4 @@ CREATE TABLE "public"."users" (
 COMMENT ON COLUMN "public"."users"."role" IS '0 => student 1 => admin 2 => teacher ';
 
 
--- 2019-05-31 18:24:15.386083+07
+-- 2019-05-29 15:04:18.114063+07
